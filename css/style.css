@@ -1,0 +1,31 @@
+/* Här börjar css för kontaktformuläret */
+#contactContainer{
+    margin: auto;
+    align-items: center;
+    width: 80%;
+}
+#h1Contact{
+    text-align: center;
+}
+#contactForm{
+    display: flex;
+    flex-direction: column;
+}
+#inputName{
+    width: 40%;
+    margin-bottom: 10px;
+}
+#inputSubject{
+    width: 40%;
+    margin-bottom: 10px;
+}
+.textArea{
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#btnContact{
+    width: 20%;
+    align-self: flex-end;
+}
+/* Här slutar css för kontaktformuläret */
