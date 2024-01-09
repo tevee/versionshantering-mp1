@@ -7,13 +7,15 @@ export function displaySearchedIngredients(savedResultObj) {
     }
 }
 
+export function removePrevRecipeSearch() {
+    const contentContainerEl = document.querySelector('#contentContainer');
+    contentContainerEl.innerHTML = '';
+}
+
 export function removePrevIngredientSearch() {
     const storedIngredientsContainerEl = document.querySelector('#storedIngredientsContainer');
     storedIngredientsContainerEl.innerHTML = '';
 }
-
-
-
 
 export function displayRecipe(data) {
     const discoverContainer = document.querySelector('#discoverContainer');
@@ -49,12 +51,13 @@ export function displayRandomRecipe(data) {
         contentContainer.append(recipeCard);
     }
 }
-/* Ska användas till sökfunktion under recipe, används inte just nu */
+
 export function displayRecipeByIngredients(data){
     const contentContainer = document.querySelector('#contentContainer');
     
     for (const recipe of data) {
-        const recipeCard = document.querySelector('#recipeCards');
+        const recipeCard = createAndAppendElement('div', '', contentContainer)
+        recipeCard.classList.add('recipe-card')
   
         createAndAppendElement('img', recipe.image, recipeCard);
         createAndAppendElement('h1', recipe.title, recipeCard);
@@ -68,8 +71,6 @@ export function displayRecipeByIngredients(data){
             createAndAppendElement('p', ingredient.original, recipeCard);
         }
   
-  
         contentContainer.append(recipeCard);
     }
-  
-  }
+}

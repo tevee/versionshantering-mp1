@@ -25,22 +25,16 @@
       </nav>
     </header>
     <!-- Recipes -->
+    <form id="getIngredientsForm">
+      <input type="text" class="search" placeholder="Write ingredient..." />
+      <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <div id="storedIngredientsContainer"></div>
+    </form>
     <form id="searchRecipe">
       <button>Search recipe with selected ingredients</button>
     </form>
-    <form id="getIngredientsForm">
-        <input type="text" class="search" placeholder="Write ingredient..." />
-        <button type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <div id="storedIngredientsContainer"><ul></ul></div>
-      <div id="contentContainer">
-        <div id="recipeCards">
-          <div class="img"></div>
-          <h3>Recipe name</h3>
-          <p>Ingredients or description</p>
-        </div>
-      </div>
-    </form>
+    <div id="contentContainer"></div>
   </body>
 </html>

@@ -145,19 +145,6 @@ h2 {
 	height: 30px;
 }
 
-#contentContainer {
-	width: 100%;
-	height: 500px;
-}
-
-#recipeCards {
-	width: 30%;
-	height: 45%;
-	padding: 1rem;
-	background-color: grey;
-	align-items: center;
-}
-
 .img {
 	width: 90%;
 	margin: auto;
@@ -210,10 +197,24 @@ h2 {
 }
 /* Här slutar css för footern */
 
+/* Sökta ingredients element */
 .storedIngredientsWrapper {
 	display: flex;
 }
 
 .storedIngredientsWrapper > button {
 	margin-left: 8px;
+}
+
+/* Recipe by ingredients innehåll */
+#contentContainer {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
 }
