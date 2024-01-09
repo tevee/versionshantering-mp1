@@ -1,3 +1,4 @@
+import { displayError } from "./errorHandling.js";
 // EXPORT FUNCTIONS
 export function getRandomRecipes(filters) {
 	const END_POINT = "random";
@@ -15,6 +16,15 @@ export function getRecipesByIngredients(filters) {
 			'Developer Error: "ingredients" is required as a key in the provided object'
 		);
 	}
+
+	/* visar errormeddelande då tom array returneras*/
+	if (data.usedIngredients.length=== 0) {
+		const h1El = document.createElement('h1');
+		 h1El.innerText = `No results found. Check if your spelling is correct and try again!`;
+		 document.body.append(h1El)
+		 const recipeCards = document.querySelector('#recipeCards')
+		 recipeCards.remove();		 
+	   } 
 
 	const URL = generateURL(END_POINT, filters);
 
@@ -45,8 +55,8 @@ export async function fetchData(url) {
 		const response = await fetch(url);
 		const data = await response.json();
 		return data;
-	} catch {
-		throw error;
+	} catch (error) {
+		displayError(error);
 	}
 }
 
