@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipes</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
     <script type="module" src="./main.js"></script>
     <script
-      src="https://kit.fontawesome.com/49ef8e7fc6.js"
-      crossorigin="anonymous"
+    src="https://kit.fontawesome.com/49ef8e7fc6.js"
+    crossorigin="anonymous"
     ></script>
+    <title>Recipes</title>
   </head>
   <body>
     <header>
@@ -24,13 +25,15 @@
       </nav>
     </header>
     <!-- Recipes -->
-    <form>
-      <div>
+    <form id="searchRecipe">
+      <button>Search recipe with selected ingredients</button>
+    </form>
+    <form id="getIngredientsForm">
         <input type="text" class="search" placeholder="Write ingredient..." />
         <button type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-      </div>
+        <div id="storedIngredientsContainer"><ul></ul></div>
       <div id="contentContainer">
         <div id="recipeCards">
           <div class="img"></div>
