@@ -45,14 +45,19 @@ storedIngredientsContainerEl.addEventListener("click", (event) => {
 
 searchRecipeFormEl.addEventListener('submit', event => {
     event.preventDefault();
-    
-    getRecipesByIngredients(savedResults)
-    .then(results => {
-        removePrevIngredientSearch();
-        removePrevRecipeSearch();
-        savedResults.ingredients = [];
-        console.log(savedResults.ingredients);
-        displayRecipeByIngredients(results)
-    })
-    .catch(error => console.log(error))
+
+    if(savedResults.ingredients.length !== 0) {
+        const displaySearchedIngredientsEl = searchRecipeFormEl.nextElementSibling
+        displaySearchedIngredientsEl.innerText = `Searched Ingredients: ${savedResults.ingredients}`
+        
+        getRecipesByIngredients(savedResults)
+        .then(results => {
+            removePrevIngredientSearch();
+            removePrevRecipeSearch();
+            savedResults.ingredients = [];
+            console.log(savedResults.ingredients);
+            displayRecipeByIngredients(results)
+        })
+        .catch(error => console.log(error))
+    }
 })
