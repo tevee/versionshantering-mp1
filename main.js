@@ -1,13 +1,16 @@
 import {
 	getRandomRecipes,
-	getRecipesByIngredients,
-	fetchData,
+	getRecipesByIngredients
 } from "./modules/fetchAPI.js";
 import {
 	displaySearchedIngredients,
-	removePrevIngredientSearch,
+	removePrevIngredientSearch, 
+	displayRecipe
+	
 } from "./modules/display.js";
 import { handleTabClick } from "./modules/tabs.js";
+
+
 
 // eventlistener for tabs
 document.querySelector("nav").addEventListener("click", handleTabClick);
@@ -21,6 +24,10 @@ const storedIngredientsContainerEl = document.querySelector(
 const savedResults = {
 	ingredients: [],
 };
+
+getRandomRecipes({number:5})
+.then(displayRecipe)
+.catch(error => console.log(error))
 
 ingredientsFormEl.addEventListener("submit", (event) => {
 	event.preventDefault();
@@ -54,3 +61,4 @@ searchRecipeFormEl.addEventListener("submit", (event) => {
 
 	getRecipesByIngredients(savedResults);
 });
+

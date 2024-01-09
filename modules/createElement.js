@@ -14,3 +14,14 @@ export function createStoredIngredientsEl(ingredient) {
     divEl.append(pEl, button)
     storedIngredientsContainerEl.append(divEl)
 }
+
+export function createAndAppendElement(type, content, container){
+    const element = document.createElement(type);
+    container.append(element);
+
+    if(type === 'img') element.src = content;
+    else element.innerText = content;
+
+    return element;
+
+}
