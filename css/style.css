@@ -67,3 +67,15 @@ body {
   align-self: flex-end;
 }
 /* Här slutar css för kontaktformuläret */
+/* Här börjar css för footern */
+#socialIcons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#socialIcons a{
+  margin: 20px;
+  padding: 10px;
+  font-size: 50px;
+}
+/* Här slutar css för footern */
