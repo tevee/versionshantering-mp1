@@ -1,7 +1,9 @@
-/* recipe css */
+
 body {
-  width: 550px;
+ margin: 0;
+ padding: 20px;
 }
+
 
 .navbar {
   display: flex;
@@ -9,6 +11,7 @@ body {
   list-style: none;
 }
 
+/* recipe css */
 .search {
   margin-left: 30%;
 }
