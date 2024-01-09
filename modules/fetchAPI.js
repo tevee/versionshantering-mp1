@@ -1,16 +1,8 @@
 const API_KEY = "&apiKey=8aecc0a91be54e3c9cc4bfe9d6d468f2";
 const BASE_URL = "https://api.spoonacular.com/recipes/";
 
-//  WIKI INFO
-// API:
-// random recipe
-// parameters:include-tags,exlude-tags,number(=10, 1-100)
-
-// by ingredient
-// parameters: ingredients, number(=10, 1-100), limitLicense, ranking (1 || 2), ignorePantry (bool)
-
 // EXPORT FUNCTIONS
-export function getRandomRecipe(filters) {
+export function getRandomRecipes(filters) {
 	const END_POINT = "random";
 
 	const URL = generateURL(END_POINT, filters);
@@ -18,7 +10,7 @@ export function getRandomRecipe(filters) {
 	return fetchData(URL);
 }
 
-export function getRecipesByIngredient(filters) {
+export function getRecipesByIngredients(filters) {
 	const END_POINT = "findByIngredients";
 
 	if (!filters || !filters.ingredients) {
@@ -34,11 +26,9 @@ export function getRecipesByIngredient(filters) {
 
 // API COMMUNICATION
 async function fetchData(url) {
-	console.log(url);
 	try {
 		const response = await fetch(url);
 		const data = await response.json();
-		console.log(data);
 		return data;
 	} catch {
 		throw error;
@@ -73,29 +63,3 @@ function addDashSeparator(string) {
 		.join("-")
 		.toLowerCase();
 }
-
-// TESTING
-const obj1 = {
-	includeTags: "vegetarian,dessert",
-	// excludeTags: "dairy",
-	number: 3,
-};
-
-const obj2 = {
-	includeTags: "vegetarian,dessert",
-	// excludeTags: "dairy",
-	number: 3,
-	ingredients: "sugar,+apples,+cinnamon",
-};
-
-const obj3 = {
-	// includeTags: "dessert",
-	ranking: 1,
-	number: 10,
-	limitLicense: true,
-	ingredients: "sugar,+apples,+cinnamon",
-};
-
-// getRandomRecipe(obj1);
-
-// getRecipesByIngredient(obj3);
