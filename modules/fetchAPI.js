@@ -3,6 +3,7 @@ export function getRandomRecipes(filters) {
 	const END_POINT = "random";
 
 	const URL = generateURL(END_POINT, filters);
+	console.log(URL);
 
 	return fetchData(URL);
 }
@@ -17,6 +18,7 @@ export function getRecipesByIngredients(filters) {
 	}
 
 	const URL = generateURL(END_POINT, filters);
+	console.log(URL);
 
 	return fetch(URL);
 }
@@ -40,7 +42,7 @@ export function getRecipesInformation(ids) {
 }
 
 // API COMMUNICATION
-async function fetchData(url) {
+export async function fetchData(url) {
 	try {
 		const response = await fetch(url);
 		const data = await response.json();
