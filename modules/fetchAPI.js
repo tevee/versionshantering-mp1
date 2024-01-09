@@ -1,6 +1,3 @@
-const API_KEY = "&apiKey=8aecc0a91be54e3c9cc4bfe9d6d468f2";
-const BASE_URL = "https://api.spoonacular.com/recipes/";
-
 // EXPORT FUNCTIONS
 export function getRandomRecipes(filters) {
 	const END_POINT = "random";
@@ -37,16 +34,19 @@ async function fetchData(url) {
 
 // HELPER FUNCTIONS
 function generateURL(endpoint, filters) {
+	const API_KEY = "&apiKey=8aecc0a91be54e3c9cc4bfe9d6d468f2";
+	const BASE_URL = "https://api.spoonacular.com/recipes/";
 	const FILTER_PARAMS = getFilterString(filters);
+
 	return BASE_URL + endpoint + FILTER_PARAMS + API_KEY;
 }
 
-function getFilterString(filtersObj) {
+function getFilterString(filters) {
 	let filterString = "?";
 
-	if (filtersObj) {
-		for (const [filter, value] of Object.entries(filtersObj)) {
-			const filterKey = addDashSeparator(filter);
+	if (filters) {
+		for (const [filter, value] of Object.entries(filters)) {
+			const filterKey = convertCamelToKebab(filter);
 			filterString += filterKey + "=" + value + "&";
 		}
 
@@ -57,7 +57,7 @@ function getFilterString(filtersObj) {
 	return filterString;
 }
 
-function addDashSeparator(string) {
+function convertCamelToKebab(string) {
 	return string
 		.split(/(?=[A-Z])/)
 		.join("-")
