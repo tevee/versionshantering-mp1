@@ -4,18 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipes</title>
-    <link rel="stylesheet" href="./recipes.html" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script type="module" src="./main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/49ef8e7fc6.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <header>
+      <h1>Chefs kiss</h1>
+      <nav>
+        <ul class="navbar">
+          <li>Home</li>
+          <li><b>Recipes</b></li>
+          <li>Contact</li>
+          <li>About us</li>
+        </ul>
+      </nav>
+    </header>
     <!-- Recipes -->
     <form>
       <div>
-        <input type="text" placeholder="Write ingredient or recipe..." />
+        <input
+          type="text"
+          class="search"
+          placeholder="Write ingredient or recipe..."
+        />
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
       <div id="contentContainer">
         <div id="recipeCards">
-          <img />
+          <div class="img"></div>
           <h3>Recipe name</h3>
           <p>Ingredients or description</p>
         </div>
