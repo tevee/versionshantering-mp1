@@ -12,8 +12,11 @@
 /* recipe css */
 
 body {
- margin: 0;
- padding: 20px;
+  height: 100vh;
+  padding: 20px;
+  background-image: url("../IMG/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 {
