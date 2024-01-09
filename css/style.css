@@ -67,3 +67,40 @@ body {
   align-self: flex-end;
 }
 /* Här slutar css för kontaktformuläret */
+
+/* Här börjar About */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.chefcard {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chefcard img {
+  max-width: 100px;
+  margin-left: 10px; 
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chefcard h3, .chefcard p {
+  margin: 0;
+}
+
+/* lägger margin på vänster sida av chefcard class för mellanrum */
+.chefcard:nth-child(even) {
+  margin-left: auto; 
+}
+
+/* ändrar ordningen för text-container */
+.chefcard:nth-child(even) .text-container {
+  order: -1;
+}
+/* Här slutar About */
