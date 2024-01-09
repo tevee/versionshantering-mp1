@@ -18,6 +18,24 @@ export function getRecipesByIngredients(filters) {
 
 	const URL = generateURL(END_POINT, filters);
 
+	return fetch(URL);
+}
+
+export function getRecipesByIngredientsExtended(filters) {
+	getRecipesByIngredients(filters)
+		.then((r) => r.json())
+		.then((recipes) => {
+			const ids = recipes.map((r) => r.id).join(",");
+
+			return getRecipesInformation({ ids });
+		});
+}
+
+export function getRecipesInformation(ids) {
+	const END_POINT = "informationBulk";
+
+	const URL = generateURL(END_POINT, ids);
+
 	return fetchData(URL);
 }
 
@@ -34,7 +52,8 @@ async function fetchData(url) {
 
 // HELPER FUNCTIONS
 function generateURL(endpoint, filters) {
-	const API_KEY = "&apiKey=8aecc0a91be54e3c9cc4bfe9d6d468f2";
+	// const API_KEY = "&apiKey=8aecc0a91be54e3c9cc4bfe9d6d468f2";
+	const API_KEY = "&apiKey=1cc618fa1481485e84da702af0191634";
 	const BASE_URL = "https://api.spoonacular.com/recipes/";
 	const FILTER_PARAMS = getFilterString(filters);
 
