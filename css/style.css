@@ -1,0 +1,69 @@
+/* recipe css */
+body {
+  width: 550px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.search {
+  margin-left: 30%;
+}
+
+#contentContainer {
+  margin: auto;
+  padding: 20px;
+  width: 100%;
+  height: 500px;
+}
+
+#recipeCards {
+  width: 30%;
+  height: 45%;
+  padding: 1rem;
+  background-color: grey;
+  align-items: center;
+}
+
+.img {
+  width: 90%;
+  margin: auto;
+  height: 90px;
+  background-color: lightgrey;
+}
+/* slutar här */
+
+/* Här börjar css för kontaktformuläret */
+#contactContainer {
+  margin: auto;
+  align-items: center;
+  width: 80%;
+}
+#h1Contact {
+  text-align: center;
+}
+#contactForm {
+  display: flex;
+  flex-direction: column;
+}
+#inputName {
+  width: 40%;
+  margin-bottom: 10px;
+}
+#inputSubject {
+  width: 40%;
+  margin-bottom: 10px;
+}
+.textArea {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#btnContact {
+  width: 20%;
+  align-self: flex-end;
+}
+/* Här slutar css för kontaktformuläret */
