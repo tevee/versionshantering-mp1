@@ -29,6 +29,11 @@ export function getRecipesByIngredientsExtended(filters) {
 		});
 }
 
+export function getRecipeByID(id){
+const url = `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=83d78591f91c440ead2234603cffd6c3`
+return fetchData(url);
+}
+
 export function getRecipesInformation(ids) {
 	const END_POINT = "informationBulk";
 

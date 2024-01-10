@@ -34,7 +34,7 @@ export function displayError(error) {
 
 export function displayRecipe(data) {
     const discoverContainer = document.querySelector('#discoverContainer');
-console.log(data);
+
     for (const recipe of data.recipes) {
     
         const gridItemEl = createAndAppendElement('div', '', discoverContainer);
@@ -77,6 +77,11 @@ export function displayRecipeByIngredients(data){
         createAndAppendElement('img', recipe.image, recipeCard);
         createAndAppendElement('h1', recipe.title, recipeCard);
         createAndAppendElement('h3', 'Ingredients:', recipeCard);
+       const recipeCardBtn = createAndAppendElement('button', 'Get description', recipeCard);
+
+       recipeCardBtn.classList.add('recipeCardBtn');
+       recipeCardBtn.id = recipe.id
+       recipeCardBtn.value = 'recipeCardBtn'
   
         for (const ingredient of recipe.missedIngredients) {
             createAndAppendElement('p', ingredient.original, recipeCard);

@@ -1,6 +1,7 @@
 import {
 	getRandomRecipes,
 	getRecipesByIngredients,
+	getRecipeByID
 } from "./modules/fetchAPI.js";
 import {
 	displaySearchedIngredients,
@@ -9,6 +10,7 @@ import {
 	removePrevRecipeSearch,
 	displayRecipe,
 	displayRecipeByIngredients,
+	
 } from "./modules/display.js";
 import { handleTabClick } from "./modules/tabs.js";
 import { showSidebar, hideSidebar } from "./modules/hamburger.js";
@@ -20,10 +22,15 @@ document.querySelector("nav").addEventListener("click", handleTabClick);
 document.querySelector(".hamburger").addEventListener("click", showSidebar);
 document.querySelector(".close").addEventListener("click", hideSidebar);
 
+//Hämtar content conatiner
+const contentContainerEl = document.querySelector('#contentContainer');
+
 const ingredientsFormEl = document.querySelector("#getIngredientsForm");
 const searchRecipeFormEl = document.querySelector("#searchRecipe");
 const storedIngredientsContainerEl = document.querySelector("#storedIngredientsContainer");
 const themeModeEl = document.querySelector('#themeMode');
+
+
 
 const savedResults = {
 	ingredients: [],
@@ -99,3 +106,19 @@ searchRecipeFormEl.addEventListener("submit", (event) => {
 			});
 	}
 });
+
+contentContainerEl.addEventListener('click', (event)=>{
+	event.preventDefault();
+	
+	if(event.target.value === 'recipeCardBtn'){
+		
+		getRecipeByID(event.target.id)
+		.then(result=>{
+			console.log(result);
+		})
+		.catch(error=>{
+			console.log(error);
+		})
+
+	}
+})
