@@ -298,7 +298,7 @@ a {
 footer {
   width: auto;
   height: 205px;
-  /* background-color: black; */
+  background-color: black;
   color: white;
   font-size: small;
 }
@@ -312,6 +312,7 @@ footer {
   margin: 20px;
   padding: 10px;
   font-size: 50px;
+  color: white;
 }
 
 /* Media query för iPad */
