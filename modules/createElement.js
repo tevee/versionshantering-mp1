@@ -28,3 +28,14 @@ export function createInstructionsForRecipe(steps) {
 
     createAndAppendElement('p', steps, recipeCard)
 }
+
+export function createGlutenFreeRecipesEl(recipe) {
+    const discoverContainerEl = document.querySelector('#discoverContainer');
+
+    const gridItemEl = createAndAppendElement('div', '', discoverContainerEl)
+    gridItemEl.classList.add('gridItem')
+    gridItemEl.classList.add('image')
+
+    createAndAppendElement('img', recipe.image, gridItemEl)
+    createAndAppendElement('h2', recipe.title, gridItemEl)
+}
