@@ -42,10 +42,10 @@ button {
 	cursor: pointer;
 }
 
-.toggleFontColor {
+/* .toggleFontColor {
   color: white;
   text-shadow: 3px 2px 5px rgb(2, 2, 2);
-}
+} */
 
 /* Styling for navbar mobile */
 nav ul {
@@ -234,18 +234,20 @@ nav a {
 	background-color: white;
 	height: 30px;
 	margin-top: 30px;
-	border-radius: 5px;
+	border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
 }
 
 #getIngredientsForm > button {
-  border-radius: 12px;
+  border-radius: 15px;
+  border: none;
 }
 
 .search {
-	width: 80%;
 	height: 30px;
 	border: none;
-	margin-left: 10px;
 }
 
 .img {
@@ -272,6 +274,7 @@ nav a {
 
 #searchRecipe {
 	text-align: center;
+  margin-top: 20px;
 }
 
 #searchRecipe > button {
