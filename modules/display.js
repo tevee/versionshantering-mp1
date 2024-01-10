@@ -1,4 +1,4 @@
-import { createStoredIngredientsEl, createAndAppendElement } from "./createElement.js";
+import { createStoredIngredientsEl, createAndAppendElement, createDescriptionForRecipe } from "./createElement.js";
 
 export function displaySearchedIngredients(savedResultObj) {
 
@@ -93,4 +93,14 @@ export function displayRecipeByIngredients(data){
   
         contentContainer.append(recipeCard);
     }
+}
+
+export function displayDescriptionForRecipe(recipeArr) {
+    const recipeStepsArr = recipeArr[0].steps
+
+    recipeStepsArr.forEach(recipe => {
+        console.log(recipe.step);
+        createDescriptionForRecipe(recipe.step)
+    })
+
 }
