@@ -61,8 +61,8 @@ export async function fetchData(url) {
 
 	if (response.ok && data.length > 0) return data;
 	else if (data === undefined || data.length == 0) throw "emptyArray";
-	else if(response.ok && data.results.length > 0) return data; 
-	else if (response.ok && data.recipes.length > 0) return data; 
+	else if(response.ok && data.results.length > 0) return data; // data innehåller inte data.results när den vill ha data.recipes - felmeddelande fixa imorgon
+	else if (response.ok && data.recipes.length > 0) return data;
 	else if (data.recipes.length === 0) throw "no recipes";
 	else throw "error";
 }

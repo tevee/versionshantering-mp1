@@ -21,10 +21,7 @@ export function createStoredIngredientsEl(ingredient) {
 }
 
 export function createInstructionsForRecipe(steps, container) {
-     
-
     createAndAppendElement('p', steps, container) 
-   
 }
 
 export function createGlutenFreeRecipesEl(recipe) {
