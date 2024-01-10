@@ -262,10 +262,12 @@ h2 {
     border: 0;
     color: white;
     cursor: pointer;
+    color: rgba(255, 255, 255, 0.85);
   }
 
   .nav-link.active {
     /* styling for active link goes here */
     font-weight: 900;
+    text-shadow: 3px 2px 5px black;
   }
 }
