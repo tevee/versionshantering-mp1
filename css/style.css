@@ -20,6 +20,7 @@ body {
 	height: 100vh;
 	padding: 20px;
 	background: linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%);
+  background-attachment: fixed;
 }
 
 h1 {
@@ -250,6 +251,10 @@ nav a {
 	border: none;
 }
 
+.search:after {
+  border: none;
+}
+
 .img {
 	width: 90%;
 	margin: auto;
@@ -296,7 +301,7 @@ nav a {
   background-color: white;
   border-radius: 15px;
   padding: 3px 10px;
-  margin: 5px;
+  margin: 5px 5px 5px 0;
 }
 
 .storedIngredientsWrapper > button {
