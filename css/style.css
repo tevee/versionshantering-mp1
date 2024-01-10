@@ -248,18 +248,18 @@ h2 {
 /* Här slutar css för kontaktformuläret */
 
 /* Här börjar About */
-h1{
+h1 {
   text-align: center;
 }
-nav{
+nav {
   text-align: center;
 }
-a{
+a {
   color: black;
   text-decoration: none;
 }
 
-#about {
+.aboutMainWrapper {
   display: flex;
   flex-direction: column;
 }
@@ -272,7 +272,7 @@ a{
 
 .chefcard img {
   max-width: 100px;
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
 .text-container {
@@ -280,13 +280,14 @@ a{
   flex-direction: column;
 }
 
-.chefcard h3, .chefcard p {
+.chefcard h3,
+.chefcard p {
   margin: 0;
 }
 
 /* lägger margin på vänster sida av chefcard class för mellanrum */
 .chefcard:nth-child(even) {
-  margin-left: auto; 
+  margin-left: auto;
 }
 
 /* ändrar ordningen för text-container */
@@ -294,50 +295,56 @@ a{
   order: -1;
 }
 
-
-footer{
+footer {
   width: auto;
   height: 205px;
-  background-color: black;
+  /* background-color: black; */
   color: white;
   font-size: small;
 }
 #socialIcons {
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   color: white;
 }
 #socialIcons a {
-margin: 20px;
-padding: 10px;
-font-size: 50px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 50px;
 }
 
 /* Media query för iPad */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  main {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-  }
 
-  .chefcard {
-      width: calc(100% - 20px); /* Full width med margin */
-  }
-}
-
-/* Media query för desktop */
-@media only screen and (min-width: 1025px) {
-  main {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-  }
-
-  .chefcard {
-      width: calc(33.33% - 20px); /* 3 cards i rad med margin */
-  }
-
-}
 /* Här slutar About */
+
+@media screen and (min-width: 600px) {
+  .navWrapper > nav {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav-link {
+    /* styling for buttons goes here */
+    background: none;
+    border: 0;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-link.active {
+    /* styling for active link goes here */
+    font-weight: 900;
+  }
+
+  .aboutMainWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .chefcard {
+    width: calc(33.33% - 20px); /* 3 cards i rad med margin */
+  }
+}
