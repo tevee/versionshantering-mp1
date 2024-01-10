@@ -41,6 +41,7 @@ console.log(data);
         gridItemEl.classList.add('gridItem')
         gridItemEl.classList.add('image')
         createAndAppendElement('img', recipe.image, gridItemEl);
+        createAndAppendElement('h2', recipe.title, gridItemEl);
     
     }
 }

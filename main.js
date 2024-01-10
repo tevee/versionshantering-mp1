@@ -11,9 +11,14 @@ import {
 	displayRecipeByIngredients,
 } from "./modules/display.js";
 import { handleTabClick } from "./modules/tabs.js";
+import { showSidebar, hideSidebar } from "./modules/hamburger.js";
 
 // eventlistener for tabs
 document.querySelector("nav").addEventListener("click", handleTabClick);
+
+//eventlistener for hamburger menu
+document.querySelector(".hamburger").addEventListener("click", showSidebar);
+document.querySelector(".close").addEventListener("click", hideSidebar);
 
 const ingredientsFormEl = document.querySelector("#getIngredientsForm");
 const searchRecipeFormEl = document.querySelector("#searchRecipe");
