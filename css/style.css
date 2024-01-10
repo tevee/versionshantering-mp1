@@ -55,6 +55,7 @@ nav a{
 .menu-button{
     display: none;
 }
+
 @media(max-width: 750px){
     .hideOnMobile{
         display: none;
