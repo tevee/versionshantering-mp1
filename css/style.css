@@ -42,10 +42,10 @@ button {
 	cursor: pointer;
 }
 
-/* .toggleFontColor {
+.toggleFontColor {
   color: white;
   text-shadow: 3px 2px 5px rgb(2, 2, 2);
-} */
+}
 
 /* Styling for navbar mobile */
 nav ul {
@@ -328,6 +328,7 @@ nav a {
   height: 25px;
 	margin-bottom: 10px;
   padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.408);
 }
 
 #inputEmail {
@@ -335,6 +336,7 @@ nav a {
 	height: 25px;
 	margin-bottom: 30px;
 	padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.408);
 }
 
 .textArea {
@@ -345,6 +347,7 @@ nav a {
 	width: 100%;
 	margin-bottom: 30px;
 	padding: 10px;
+  background-color: rgba(255, 255, 255, 0.408);
 }
 
 #btnContact {
@@ -370,6 +373,11 @@ a {
 .aboutMainWrapper {
 	display: flex;
 	flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.209);
+  border: 2px solid rgba(119, 129, 119, 0.24);
 }
 
 .chefcard {
@@ -390,7 +398,8 @@ a {
 
 .chefcard h3,
 .chefcard p {
-	margin: 0;
+	margin: 5px;
+  font-size: 15px;
 }
 
 /* lägger margin på vänster sida av chefcard class för mellanrum */
