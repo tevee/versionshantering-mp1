@@ -402,11 +402,9 @@ footer {
 #socialIcons a:hover {
   margin: 10px;
   padding: 5px;
-  font-size: 15px;
+  font-size: 30px;
   color: rgb(40, 40, 40);
-  font-size: 15px;
   margin: 10px;
-  color: black;
 }
 /* Här slutar css för footern */
 
