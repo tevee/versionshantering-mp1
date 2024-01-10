@@ -249,6 +249,7 @@ nav a {
 .search {
 	height: 30px;
 	border: none;
+  width: 520px;
 }
 
 .search:after {
@@ -557,4 +558,37 @@ footer {
 	.chefcard {
 		width: calc(33.33% - 20px); /* 3 cards i rad med margin */
 	}
+
+  /* recipe desktop */
+  /* #recipes-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+  }
+  #getIngredientsForm {
+    width: 570px;
+
+  }
+  #storedIngredientsContainer {
+    width: 570px;
+ 
+  } */
+  /* /// recipe desktop */
+
+  /* footer desktop */
+  #socialIcons {
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+  /* ///footer desktop */
 }
