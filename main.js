@@ -10,7 +10,7 @@ import {
 	removePrevRecipeSearch,
 	displayRecipe,
 	displayRecipeByIngredients,
-	
+	displayDescriptionForRecipe
 } from "./modules/display.js";
 import { handleTabClick } from "./modules/tabs.js";
 import { showSidebar, hideSidebar } from "./modules/hamburger.js";
@@ -113,12 +113,8 @@ contentContainerEl.addEventListener('click', (event)=>{
 	if(event.target.value === 'recipeCardBtn'){
 		
 		getRecipeByID(event.target.id)
-		.then(result=>{
-			console.log(result);
-		})
-		.catch(error=>{
-			console.log(error);
-		})
+		.then(displayDescriptionForRecipe)
+		.catch(error => displayError(error))
 
 	}
 })

@@ -30,7 +30,7 @@ export function getRecipesByIngredientsExtended(filters) {
 }
 
 export function getRecipeByID(id){
-const url = `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=83d78591f91c440ead2234603cffd6c3`
+const url = `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=1cc618fa1481485e84da702af0191634`
 return fetchData(url);
 }
 
@@ -61,7 +61,7 @@ function generateURL(endpoint, filters) {
 	// 1cc618fa1481485e84da702af0191634 - Thiens API KEY
 	// 83d78591f91c440ead2234603cffd6c3 - Amandas API KEY
 	// deec58bb0fe24310940e44c32d429a87 - Andréas API KEY
-	const API_KEY = "&apiKey=83d78591f91c440ead2234603cffd6c3";
+	const API_KEY = "&apiKey=1cc618fa1481485e84da702af0191634";
 	const BASE_URL = "https://api.spoonacular.com/recipes/";
 	const FILTER_PARAMS = getFilterString(filters);
 
