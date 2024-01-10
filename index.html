@@ -1,55 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
-    <link
-    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous"referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script type="module" src="./main.js"></script>
-    <title>Versionshantering Miniprojekt 1</title>
-  </head>
-  <body>
-    <!-- Här börjar kontaktformuläret -->
-    <div id="contactContainer">
-      <h1 id="h1Contact">Ask us anything</h1>
-      <form id="contactForm">
-        <input
-          class="inputForm"
-          type="text"
-          name="name"
-          id="inputName"
-          placeholder="Firstname Lastname:"
-        />
-        <input
-          class="inputform"
-          type="text"
-          id="inputSubject"
-          placeholder="Subject:"
-        />
-        <textarea
-          class="textArea"
-          id="message"
-          name="message"
-          placeholder="What can we help you with?"
-        ></textarea>
-        <button id="btnContact">Send</button>
-      </form>
-    </div>
-    <!-- Här slutar kontaktformuläret -->
-    <!-- Här börjar footern -->
-    <footer id="footerContainer">
-      <div id="socialIcons">
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-      </div>
-    </footer>
-    <!-- Här slutar footern -->
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="#" type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script type="module" src="./main.js"></script>
+		<title>Versionshantering Miniprojekt 1</title>
+	</head>
+	<body>
+		<!--Header-->
+		<header>
+			<h1>Chefs Kiss</h1>
+			<!-- <nav>
+				<ul class="navbar">
+					<li><b>Discover</b></li>
+					<li>Recipes</li>
+					<li>Contact</li>
+					<li>About us</li>
+				</ul>
+			</nav> -->
+		</header>
+		<!--///Header-->
+
+		<main>
+			<section class="navWrapper">
+				<nav>
+					<button id="home" class="nav-link active">Discover</button>
+					<button id="recipes" class="nav-link">Recipes</button>
+					<button id="contact" class="nav-link">Contact</button>
+					<button id="about" class="nav-link">About Us</button>
+				</nav>
+        <div class="navBorderBottom"></div>
+			</section>
+
+			<section>
+				<div id="home-panel" class="tab-panel active">
+					<!-- DISCOVER PAGE HTML GOES HERE -->
+                    <h2 class="h2Discover">Discover new recipes</h2>
+		            <div id="discoverContainer"></div>
+				</div>
+
+				<div id="recipes-panel" class="tab-panel">
+					<!-- RECIPES HTML GOES HERE -->
+                    <form id="getIngredientsForm">
+                        <input type="text" class="search" placeholder="Write ingredient..." required />
+                        <button type="submit">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <div id="storedIngredientsContainer"></div>
+                    </form>
+                    <form id="searchRecipe">
+                        <button>Search recipe with selected ingredients</button>
+                    </form>
+                    <h2></h2>
+                    <div id="contentContainer"></div>
+				</div>
+
+				<div id="contact-panel" class="tab-panel">
+					<!-- CONTACT HTML GOES HERE -->
+                    <div id="contactContainer">
+                        <h2 id="h2Contact">Ask us anything!</h2>
+                        <form id="contactForm">
+                            <input
+                                class="inputForm"
+                                type="text"
+                                name="name"
+                                id="inputName"
+                                placeholder="Name"
+                            />
+                            <input
+                                class="inputform"
+                                type="text"
+                                id="inputEmail"
+                                placeholder="Email"
+                            />
+                            <textarea
+                                class="textArea"
+                                id="message"
+                                name="message"
+                                placeholder="What can we help you with?"
+                            ></textarea>
+                            <button id="btnContact">Send</button>
+                        </form>
+                    </div>
+				</div>
+
+				<div id="about-panel" class="tab-panel">
+					<!-- ABOUT HTML GOES HERE -->
+                    <div class="chefcard">
+                        <img src="./Img/profile-none.png" alt="profile-img">
+                        <div class="text-container">
+                            <h3>Amandas choice:</h3>
+                            <p>Carbonara</p>
+                        </div>
+                    </div>
+                    <div class="chefcard">
+                        <img src="./Img/profile-none.png" alt="profile-img">
+                        <div class="text-container">
+                            <h3>Andréas choice:</h3>
+                            <p>Lorem ipsum dolor sit.</p>
+                        </div>
+                    </div>
+                    <div class="chefcard">
+                        <img src="./Img/profile-none.png" alt="profile-img">
+                        <div class="text-container">
+                            <h3>Thiens choice:</h3>
+                            <p>Lorem ipsum dolor sit.</p>
+                        </div>
+                    </div>
+				</div>
+			</section>
+		</main>
+	
+		<!-- Här börjar footern -->
+		<footer id="footerContainer">
+			<div id="socialIcons">
+				<a href="#"><i class="fa-brands fa-facebook"></i></a>
+				<a href="#"><i class="fa-brands fa-instagram"></i></a>
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#"><i class="fa-brands fa-youtube"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+			</div>
+		</footer>
+		<!-- Här slutar footern -->
+	</body>
 </html>
