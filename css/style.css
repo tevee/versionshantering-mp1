@@ -107,14 +107,10 @@ nav a {
 body {
 	height: 100vh;
 	padding: 20px;
-	/* background: linear-gradient(
-		0deg,
-		rgb(166, 166, 166) 0%,
-		rgba(243, 243, 243, 0.667) 100%
-	); */
   background-image: url('../IMG/background-image.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+  background-size: cover;
 }
 
 h1 {
