@@ -364,14 +364,39 @@ footer {
 	color: white;
 }
 #socialIcons a {
-	margin: 20px;
-	padding: 10px;
-	font-size: 50px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 50px;
+  margin: 20px;
+  color: black;
+}
+/* Här slutar css för footern */
+
+/* Sökta ingredients element */
+#storedIngredientsContainer {
+  display: flex;
 }
 
-/* Media query för iPad */
+.storedIngredientsWrapper {
+  display: flex;
+}
 
-/* Här slutar About */
+.storedIngredientsWrapper > button {
+  margin-left: 8px;
+}
+
+/* Recipe by ingredients innehåll */
+#contentContainer {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+}
 
 @media screen and (min-width: 600px) {
 	.navWrapper > nav {
@@ -384,7 +409,6 @@ footer {
 		/* styling for buttons goes here */
 		background: none;
 		border: 0;
-		color: white;
 		cursor: pointer;
 	}
 

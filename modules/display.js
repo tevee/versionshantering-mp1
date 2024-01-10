@@ -18,21 +18,18 @@ export function removePrevIngredientSearch() {
 }
 
 export function displayError(error) {
+    console.log(error);
     removePrevIngredientSearch();
     removePrevRecipeSearch();
     const h2El = document.createElement('h2');
-    const contentContainer = document.querySelector('#contentContainer')
-    const discoverContainer = document.querySelector('#discoverContainer');
-    if (error === 'emptyArray'){
-        h2El.innerText= `No results found. Check if your spelling is correct and try again!`;
-        contentContainer.append(h2El);
-    }
-    else if( error === 'no recipes'){
-        h2El.innerText = 'No recipes found';
-        discoverContainer.append(h2El);
-    }
+    const errorContainer = document.querySelector('#displayError')
+    errorContainer.innerHTML = ''
+
+    if (error === 'emptyArray') h2El.innerText= `No results found. Check if your spelling is correct and try again!`;
+    else if( error === 'no recipes') h2El.innerText = 'No recipes found';
     else h2El.innerText = `Something went wrong. Try again later!`;
-        
+    
+    errorContainer.append(h2El);
 }
 
 export function displayRecipe(data) {
