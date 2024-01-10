@@ -107,10 +107,23 @@ nav a {
 body {
 	height: 100vh;
 	padding: 20px;
-  background-image: url('../IMG/background-image.png');
+
+  /*light mode*/
+	background: linear-gradient(
+		0deg,
+		rgb(179, 212, 176) 0%,
+		rgba(255, 255, 255, 0.667) 100%
+	);
+
+  /* dark mode*/
+  /* background: linear-gradient(
+		0deg,
+		rgb(46, 56, 45) 0%,
+		rgba(144, 144, 144, 0.667) 100%
+	); */
+  
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-  background-size: cover;
 }
 
 h1 {
@@ -138,7 +151,7 @@ h2 {
 }
 
 .navBorderBottom {
-	background-color: black;
+	background-color:black;
 	height: 2px;
 	margin-top: 30px;
 }
