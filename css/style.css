@@ -107,11 +107,12 @@ nav a {
 body {
 	height: 100vh;
 	padding: 20px;
-	background: linear-gradient(
+	/* background: linear-gradient(
 		0deg,
 		rgb(166, 166, 166) 0%,
 		rgba(243, 243, 243, 0.667) 100%
-	);
+	); */
+  background-image: url('../IMG/background-image.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
@@ -120,16 +121,16 @@ h1 {
 	font-size: 40px;
 	text-align: center;
 	font-family: "title";
-	color: rgb(32, 32, 32);
-	text-shadow: 3px 2px 5px rgb(142, 142, 142);
+	color: black;
+	text-shadow: 3px 2px 5px rgb(255, 255, 255);
 }
 
 h2 {
 	text-align: center;
 	font-family: "title";
 	margin: 20px 0 20px 0;
-	color: rgb(35, 35, 35);
-	text-shadow: 3px 2px 5px rgb(132, 132, 132);
+	color: black;
+	text-shadow: 3px 2px 5px rgb(255, 255, 255);
 }
 
 .navbar {
@@ -141,7 +142,7 @@ h2 {
 }
 
 .navBorderBottom {
-	background-color: rgba(0, 0, 0, 0.269);
+	background-color: black;
 	height: 2px;
 	margin-top: 30px;
 }
@@ -266,10 +267,7 @@ h2 {
 }
 
 #searchRecipe > button:hover {
-	background-color: white;
-	border: 0;
-	border-radius: 4px;
-	padding: 3px;
+	background-color: rgb(177, 177, 177);
 }
 
 #storedIngredientsContainer {
@@ -314,14 +312,16 @@ h2 {
 	align-items: center;
 	width: 80%;
 }
-#h1Contact {
+
+/* h1Contact finns inte */
+/* #h1Contact {
 	text-align: center;
 	background-color: rgba(0, 0, 0, 0.449);
 	padding: 20px;
 	border-radius: 10px;
 	height: 600px;
 	box-sizing: border-box;
-}
+} */
 
 #contactForm {
 	display: flex;
@@ -330,16 +330,20 @@ h2 {
 
 #inputName {
 	width: 40%;
+  height: 25px;
 	margin-bottom: 10px;
+  padding-left: 10px;
 }
-#inputSubject {
+
+/* finns inte */
+/* #inputSubject {
 	width: 40%;
 	margin-bottom: 10px;
 	width: 40%;
 	height: 25px;
 	margin-bottom: 10px;
 	padding-left: 10px;
-}
+} */
 
 #inputEmail {
 	width: 40%;
