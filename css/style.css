@@ -253,19 +253,18 @@ h2 {
 
 .storedIngredientsWrapper {
   background-color: white;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
+  border-radius: 15px;
+  padding: 3px 10px;
+  margin: 5px;
 }
 
 .storedIngredientsWrapper > p {
-  margin-left: 5px;
+  /* margin-left: 5px; */
 }
 
 .storedIngredientsWrapper > button {
-  height: 15px;
-  border-radius: 10px;
-  margin: 2px 3px 0 0;
+  border: none;
+  background-color: white;
 }
 
 /* slutar här */
