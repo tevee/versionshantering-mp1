@@ -85,16 +85,15 @@ nav a{
 body {
 	height: 100vh;
 	padding: 20px;
-	background-image: url("../IMG/background.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+  background: linear-gradient(0deg, rgb(169, 169, 168) 0%, rgb(210, 210, 210) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
 	text-align: center;
 	font-family: "title";
-	color: rgba(255, 255, 255, 0.85);
+	color: white;
 	text-shadow: 3px 2px 5px black;
 }
 
@@ -102,7 +101,7 @@ h2 {
 	text-align: center;
 	font-family: "title";
 	margin: 20px 0 20px 0;
-	color: rgba(255, 255, 255, 0.843);
+	color: white;
 	text-shadow: 3px 2px 5px black;
 }
 
