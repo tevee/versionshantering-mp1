@@ -29,14 +29,16 @@ const savedResults = {
 	ingredients: [],
 };
 
- getRandomRecipes({ number: 5 })
-	.then(displayRecipe)
-	.catch((error) => displayError(error));
+//  getRandomRecipes({ number: 5 })
+// 	.then(displayRecipe)
+// 	.catch((error) => displayError(error));
 
 themeModeEl.addEventListener('change', event => {
 	event.preventDefault()
 	const checkboxEl = document.querySelector('#toggleMode').checked
 	const slidebarEl = document.querySelector('.slidebar')
+	const allElementWithClassTest = document.querySelectorAll('.test')
+	console.log(allElementWithClassTest);
 
 	if(checkboxEl) {
 		slidebarEl.style.background = '#242424';
