@@ -41,10 +41,11 @@ export function getRecipesInformation(ids) {
 export async function fetchData(url) {
 	const response = await fetch(url);
 	const data = await response.json();
+	console.log(data);
 
 	if (response.ok && data.length > 0) return data;
+	else if (data === undefined || data.length == 0) throw "emptyArray";
 	else if (response.ok && data.recipes.length > 0) return data;
-	else if (data.length === 0) throw "emptyArray";
 	else if (data.recipes.length === 0) throw "no recipes";
 	else throw "error";
 }
@@ -55,7 +56,7 @@ function generateURL(endpoint, filters) {
 	// 1cc618fa1481485e84da702af0191634 - Thiens API KEY
 	// 83d78591f91c440ead2234603cffd6c3 - Amandas API KEY
 	// deec58bb0fe24310940e44c32d429a87 - Andréas API KEY
-	const API_KEY = "&apiKey=8aecc0a91be54e3c9cc4bfe9d6d468f2";
+	const API_KEY = "&apiKey=83d78591f91c440ead2234603cffd6c3";
 	const BASE_URL = "https://api.spoonacular.com/recipes/";
 	const FILTER_PARAMS = getFilterString(filters);
 
