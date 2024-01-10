@@ -113,21 +113,7 @@ nav a {
 body {
 	height: 100vh;
 	padding: 20px;
-
-  /*light mode*/
-	background: linear-gradient(
-		0deg,
-		rgb(179, 212, 176) 0%,
-		rgba(255, 255, 255, 0.667) 100%
-	);
-
-  /* dark mode*/
-  /* background: linear-gradient(
-		0deg,
-		rgb(46, 56, 45) 0%,
-		rgba(144, 144, 144, 0.667) 100%
-	); */
-
+	background: linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
@@ -367,9 +353,6 @@ h2 {
 /* Här slutar css för kontaktformuläret */
 
 /* Här börjar About */
-h1 {
-	text-align: center;
-}
 nav {
 	text-align: center;
 }
@@ -479,6 +462,54 @@ footer {
 .recipe-card {
 	display: flex;
 	flex-direction: column;
+}
+
+/* Heading */
+#heading {
+	display: flex;
+	justify-content: center;
+}
+
+#themeMode {
+	display: flex;
+	align-items: center;
+	margin-left: 2em;
+}
+
+/* toggle darkmode */
+.slidebar {
+	width:60px;
+	height:30px;
+	position: relative;
+	background: linear-gradient(#c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+	display: block;
+	border-radius: 999px;
+	box-shadow: inset 5px 0px 15px rgba(0,0,0,0.4);
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.slidebar:after {
+	content: '';
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	background: linear-gradient(180deg, #ffcc89, #d8860b);
+	border-radius: 999px;
+	box-shadow: inset 5px 0px 15px rgba(0,0,0,0.2);
+	transition: 0.5s;
+}
+
+#toggleMode {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+#toggleMode:checked + .slidebar:after {
+	left: calc(100%-60px);
+	transform: translateX(100%);
+	background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
 @media screen and (min-width: 600px) {

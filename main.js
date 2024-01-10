@@ -22,17 +22,31 @@ document.querySelector(".close").addEventListener("click", hideSidebar);
 
 const ingredientsFormEl = document.querySelector("#getIngredientsForm");
 const searchRecipeFormEl = document.querySelector("#searchRecipe");
-const storedIngredientsContainerEl = document.querySelector(
-	"#storedIngredientsContainer"
-);
+const storedIngredientsContainerEl = document.querySelector("#storedIngredientsContainer");
+const themeModeEl = document.querySelector('#themeMode');
 
 const savedResults = {
 	ingredients: [],
 };
 
-// getRandomRecipes({ number: 5 })
-// 	.then(displayRecipe)
-// 	.catch((error) => displayError(error));
+ getRandomRecipes({ number: 5 })
+	.then(displayRecipe)
+	.catch((error) => displayError(error));
+
+themeModeEl.addEventListener('change', event => {
+	event.preventDefault()
+	const checkboxEl = document.querySelector('#toggleMode').checked
+	const slidebarEl = document.querySelector('.slidebar')
+
+	if(checkboxEl) {
+		slidebarEl.style.background = '#242424';
+		document.body.style.background = 'linear-gradient(0deg,rgb(46, 56, 45) 0%,rgba(144, 144, 144, 0.667) 100%)';
+	}
+	else {
+		slidebarEl.style.background = 'linear-gradient(#c4c5c7 0%, #dcdddf 52%, #ebebeb 100%)';
+		document.body.style.background = 'linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%)'
+	}
+})
 
 ingredientsFormEl.addEventListener("submit", (event) => {
 	event.preventDefault();
