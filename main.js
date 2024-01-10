@@ -30,9 +30,9 @@ const savedResults = {
 	ingredients: [],
 };
 
-// getRandomRecipes({ number: 5 })
-// 	.then(displayRecipe)
-// 	.catch((error) => displayError(error));
+ getRandomRecipes({ number: 5 })
+	.then(displayRecipe)
+	.catch((error) => displayError(error));
 
 ingredientsFormEl.addEventListener("submit", (event) => {
 	event.preventDefault();
