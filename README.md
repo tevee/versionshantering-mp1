@@ -9,4 +9,4 @@ Chef's kiss i a school project developed for mini project 1 in the Version Contr
 
 ## Project Documentation
 
-For detailed information about the project, refer to the [GitHub Wiki](https://github.com/your-username/your-repository/wiki).
+For detailed information about the project, refer to the [GitHub Wiki](https://github.com/tevee/versionshantering-mp1/wiki).
