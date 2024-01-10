@@ -1,7 +1,7 @@
 import {
 	getRandomRecipes,
 	getRecipesByIngredients,
-	getRecipeByID
+	getInstructionsFromRecipeById
 } from "./modules/fetchAPI.js";
 import {
 	displaySearchedIngredients,
@@ -10,7 +10,7 @@ import {
 	removePrevRecipeSearch,
 	displayRecipe,
 	displayRecipeByIngredients,
-	displayDescriptionForRecipe
+	displayInstructionsForRecipe
 } from "./modules/display.js";
 import { handleTabClick } from "./modules/tabs.js";
 import { showSidebar, hideSidebar } from "./modules/hamburger.js";
@@ -22,15 +22,11 @@ document.querySelector("nav").addEventListener("click", handleTabClick);
 document.querySelector(".hamburger").addEventListener("click", showSidebar);
 document.querySelector(".close").addEventListener("click", hideSidebar);
 
-//Hämtar content conatiner
 const contentContainerEl = document.querySelector('#contentContainer');
-
 const ingredientsFormEl = document.querySelector("#getIngredientsForm");
 const searchRecipeFormEl = document.querySelector("#searchRecipe");
 const storedIngredientsContainerEl = document.querySelector("#storedIngredientsContainer");
 const themeModeEl = document.querySelector('#themeMode');
-
-
 
 const savedResults = {
 	ingredients: [],
@@ -60,9 +56,7 @@ themeModeEl.addEventListener('change', event => {
 ingredientsFormEl.addEventListener("submit", (event) => {
 	event.preventDefault();
 	removePrevIngredientSearch();
-	const inputElValue = document.querySelector(
-		"#getIngredientsForm > input"
-	).value;
+	const inputElValue = document.querySelector("#getIngredientsForm > input").value;
 
 	savedResults.ingredients.push(inputElValue);
 	console.log(savedResults.ingredients);
@@ -111,10 +105,10 @@ contentContainerEl.addEventListener('click', (event)=>{
 	event.preventDefault();
 	
 	if(event.target.value === 'recipeCardBtn'){
+		console.log(event.target.id);
 		
-		getRecipeByID(event.target.id)
-		.then(displayDescriptionForRecipe)
+		getInstructionsFromRecipeById(event.target.id)
+		.then(displayInstructionsForRecipe)
 		.catch(error => displayError(error))
-
 	}
 })

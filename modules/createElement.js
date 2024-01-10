@@ -20,7 +20,7 @@ export function createStoredIngredientsEl(ingredient) {
     button.value = ingredient
 }
 
-export function createDescriptionForRecipe(steps) {
+export function createInstructionsForRecipe(steps) {
     const contentContainerEl = document.querySelector('#contentContainer')
 
     const recipeCard = createAndAppendElement('div', '', contentContainerEl)
