@@ -427,6 +427,7 @@ footer {
 	color: rgb(66, 66, 66);
 	font-size: 1rem;
 	text-align: center;
+  margin-bottom: 30px;
 }
 
 #socialIcons {
@@ -559,6 +560,7 @@ footer {
 		width: calc(33.33% - 20px); /* 3 cards i rad med margin */
 	}
 
+  /* FUNKAR EJ SOM DET SKA */
   /* recipe desktop */
   /* #recipes-panel {
     display: flex;
@@ -576,6 +578,19 @@ footer {
  
   } */
   /* /// recipe desktop */
+
+  /* contact desktop */
+  #contactContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #contactForm {
+    width: 570px;
+  }
+  /* ///contact desktop */
 
   /* footer desktop */
   #socialIcons {
