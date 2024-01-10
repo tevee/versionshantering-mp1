@@ -3,10 +3,16 @@
 	src: url("../fonts/title.ttf");
 }
 
+@font-face {
+  font-family: "nunito";
+  src: url("../fonts/nunito.ttf");
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+  font-family: "nunito";
 }
 
 button {
@@ -121,7 +127,7 @@ body {
 		rgb(46, 56, 45) 0%,
 		rgba(144, 144, 144, 0.667) 100%
 	); */
-  
+
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
@@ -316,25 +322,15 @@ h2 {
 /* slutar här */
 
 /* Här börjar css för kontaktformuläret */
-#contactContainer {
-	margin: auto;
-	align-items: center;
-	width: 80%;
-}
-
-/* h1Contact finns inte */
-/* #h1Contact {
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.449);
-	padding: 20px;
-	border-radius: 10px;
-	height: 600px;
-	box-sizing: border-box;
-} */
-
 #contactForm {
 	display: flex;
 	flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+	box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.209);
+  border: 2px solid rgba(119, 129, 119, 0.24);
+  height: 400px;
 }
 
 #inputName {
@@ -343,16 +339,6 @@ h2 {
 	margin-bottom: 10px;
   padding-left: 10px;
 }
-
-/* finns inte */
-/* #inputSubject {
-	width: 40%;
-	margin-bottom: 10px;
-	width: 40%;
-	height: 25px;
-	margin-bottom: 10px;
-	padding-left: 10px;
-} */
 
 #inputEmail {
 	width: 40%;
@@ -377,6 +363,8 @@ h2 {
 	width: 20%;
 	height: 30px;
 	align-self: flex-end;
+  background-color: white;
+  border-radius: 5px;
 }
 /* Här slutar css för kontaktformuläret */
 
@@ -429,7 +417,6 @@ a {
 }
 
 footer {
-	font-family: Arial, Helvetica, sans-serif;
 	width: auto;
 	height: auto;
 	background-color: rgba(133, 130, 130, 0.425);
