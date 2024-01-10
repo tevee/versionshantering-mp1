@@ -16,11 +16,38 @@
   background: fixed;
 }
 
+body {
+	height: 100vh;
+	padding: 20px;
+	background: linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%);
+}
+
+h1 {
+	font-size: 40px;
+	text-align: center;
+	font-family: "title";
+	color: black;
+	text-shadow: 3px 2px 5px rgb(255, 255, 255);
+}
+
+h2 {
+	text-align: center;
+	font-family: "title";
+	margin: 20px 0 20px 0;
+	color: black;
+	text-shadow: 3px 2px 5px rgb(255, 255, 255);
+}
+
 button {
 	cursor: pointer;
 }
 
-/* Styling for navbar */
+/* .toggleFontColor {
+  color: white;
+  text-shadow: 3px 2px 5px rgb(2, 2, 2);
+} */
+
+/* Styling for navbar mobile */
 nav ul {
 	width: 100%;
 	list-style: none;
@@ -92,9 +119,25 @@ nav a {
 		display: block;
 	}
 }
+/* /// navbar mobile */
+
+/* navbar desktop */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin-top: 20px;
+	color: rgba(182, 182, 182, 0.833);
+}
+
+.navBorderBottom {
+	background-color:black;
+	height: 1px;
+	margin-top: 30px;
+}
+/* ///navbar desktop */
 
 /* Tab styling */
-
 .nav-link {
 	/* styling for buttons goes here */
 }
@@ -110,45 +153,9 @@ nav a {
 .tab-panel.active {
 	display: block;
 }
+/* ///Tab styling */
 
-body {
-	height: 100vh;
-	padding: 20px;
-	background: linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%);
-
-}
-
-h1 {
-	font-size: 40px;
-	text-align: center;
-	font-family: "title";
-	color: black;
-	text-shadow: 3px 2px 5px rgb(255, 255, 255);
-}
-
-h2 {
-	text-align: center;
-	font-family: "title";
-	margin: 20px 0 20px 0;
-	color: black;
-	text-shadow: 3px 2px 5px rgb(255, 255, 255);
-}
-
-.navbar {
-	display: flex;
-	justify-content: space-between;
-	list-style: none;
-	margin-top: 20px;
-	color: rgba(182, 182, 182, 0.833);
-}
-
-.navBorderBottom {
-	background-color:black;
-	height: 2px;
-	margin-top: 30px;
-}
 /* discover css*/
-
 #discoverContainer {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
@@ -302,10 +309,9 @@ h2 {
 	margin-left: 5px;
   font-size: 13px;
 }
+/* ///recipe css */
 
-/* slutar här */
-
-/* Här börjar css för kontaktformuläret */
+/* contact css */
 #contactForm {
 	display: flex;
 	flex-direction: column;
@@ -350,9 +356,9 @@ h2 {
   background-color: white;
   border-radius: 5px;
 }
-/* Här slutar css för kontaktformuläret */
+/* ///contact css */
 
-/* Här börjar About */
+/* about css */
 nav {
 	text-align: center;
 }
@@ -396,22 +402,20 @@ a {
 .chefcard:nth-child(even) .text-container {
 	order: -1;
 }
+/* ///about css */
 
+/* footer css */
 footer {
-	width: auto;
-	height: auto;
 	color: rgb(66, 66, 66);
 	font-size: 1rem;
 	text-align: center;
 }
+
 #socialIcons {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	width: auto;
-	height: 60px;
-	/* background-color: black; */
-	font-size: small;
 }
 
 #socialIcons a {
@@ -420,6 +424,7 @@ footer {
 	font-size: 35px;
 	color: rgb(51, 51, 51);
 }
+
 #socialIcons a:hover {
 	margin: 10px;
 	padding: 5px;
@@ -427,7 +432,11 @@ footer {
 	color: rgb(40, 40, 40);
 	margin: 10px;
 }
-/* Här slutar css för footern */
+
+.footer-content {
+  font-size: 12px;
+}
+/* ///footer css */
 
 /* Sökta ingredients element */
 #storedIngredientsContainer {
