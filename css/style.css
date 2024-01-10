@@ -162,11 +162,18 @@ h2 {
 }
 #h1Contact {
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.449);
+  padding: 20px;
+  border-radius: 10px;
+  height: 600px;
+  box-sizing: border-box;
 }
+
 #contactForm {
   display: flex;
   flex-direction: column;
 }
+
 #inputName {
   width: 40%;
   margin-bottom: 10px;
@@ -174,14 +181,34 @@ h2 {
 #inputSubject {
   width: 40%;
   margin-bottom: 10px;
+  width: 40%;
+  height: 25px;
+  margin-bottom: 10px;
+  padding-left: 10px;
 }
+
+#inputEmail {
+  width: 40%;
+  height: 25px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+}
+
 .textArea {
   height: 100px;
   width: 100%;
   margin-bottom: 10px;
+  height: 150px;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 10px;
 }
+
 #btnContact {
   width: 20%;
+  align-self: flex-end;
+  width: 20%;
+  height: 30px;
   align-self: flex-end;
 }
 /* Här slutar css för kontaktformuläret */
@@ -195,6 +222,8 @@ h2 {
   margin: 20px;
   padding: 10px;
   font-size: 50px;
+  margin: 20px;
+  color: black;
 }
 /* Här slutar css för footern */
 
