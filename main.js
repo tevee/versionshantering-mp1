@@ -111,9 +111,11 @@ contentContainerEl.addEventListener('click', (event)=>{
 	event.preventDefault();
 	
 	if(event.target.value === 'recipeCardBtn'){
+		const recipeCardButton = document.getElementById(event.target.id)
+		const recipeCardEl = recipeCardButton.parentElement
 		
 		getInstructionsFromRecipeById(event.target.id)
-		.then(displayInstructionsForRecipe)
+		.then(result => displayInstructionsForRecipe(result, recipeCardEl))
 		.catch(error => displayError(error))
 	}
 })
