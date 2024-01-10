@@ -1,7 +1,8 @@
 import {
 	getRandomRecipes,
 	getRecipesByIngredients,
-	getInstructionsFromRecipeById
+	getInstructionsFromRecipeById,
+	getRecipesWithComplexSearch
 } from "./modules/fetchAPI.js";
 import {
 	displaySearchedIngredients,
@@ -10,7 +11,8 @@ import {
 	removePrevRecipeSearch,
 	displayRecipe,
 	displayRecipeByIngredients,
-	displayInstructionsForRecipe
+	displayInstructionsForRecipe,
+	displayGlutenFreeRecipes
 } from "./modules/display.js";
 import { handleTabClick } from "./modules/tabs.js";
 import { showSidebar, hideSidebar } from "./modules/hamburger.js";
@@ -35,6 +37,10 @@ const savedResults = {
 //  getRandomRecipes({ number: 5 })
 // 	.then(displayRecipe)
 // 	.catch((error) => displayError(error));
+
+// getRecipesWithComplexSearch({diet: 'gluten%20free', number: 5})
+// .then(displayGlutenFreeRecipes)
+// .catch(error => displayError(error))
 
 themeModeEl.addEventListener('change', event => {
 	event.preventDefault()
@@ -105,7 +111,6 @@ contentContainerEl.addEventListener('click', (event)=>{
 	event.preventDefault();
 	
 	if(event.target.value === 'recipeCardBtn'){
-		console.log(event.target.id);
 		
 		getInstructionsFromRecipeById(event.target.id)
 		.then(displayInstructionsForRecipe)

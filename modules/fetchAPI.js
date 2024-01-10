@@ -29,6 +29,14 @@ export function getRecipesByIngredientsExtended(filters) {
 		});
 }
 
+export function getRecipesInformation(ids) {
+	const END_POINT = "informationBulk";
+	
+	const URL = generateURL(END_POINT, ids);
+	
+	return fetchData(URL);
+}
+
 export function getInstructionsFromRecipeById(id){
 	const END_POINT = '/analyzedInstructions?'
 
@@ -37,22 +45,22 @@ export function getInstructionsFromRecipeById(id){
 	return fetchData(URL);
 }
 
-export function getRecipesInformation(ids) {
-	const END_POINT = "informationBulk";
+export function getRecipesWithComplexSearch(filters){
+	const END_POINT = 'complexSearch'
 
-	const URL = generateURL(END_POINT, ids);
+	const URL = generateURL(END_POINT, filters)
 
-	return fetchData(URL);
+	return fetchData(URL)
 }
 
 // API COMMUNICATION
 export async function fetchData(url) {
 	const response = await fetch(url);
 	const data = await response.json();
-	console.log(data);
 
 	if (response.ok && data.length > 0) return data;
 	else if (data === undefined || data.length == 0) throw "emptyArray";
+	else if(response.ok && data.results.length > 0) return data;
 	else if (response.ok && data.recipes.length > 0) return data;
 	else if (data.recipes.length === 0) throw "no recipes";
 	else throw "error";
@@ -64,7 +72,7 @@ function generateURL(endpoint, filters, id) {
 	// 1cc618fa1481485e84da702af0191634 - Thiens API KEY
 	// 83d78591f91c440ead2234603cffd6c3 - Amandas API KEY
 	// deec58bb0fe24310940e44c32d429a87 - Andréas API KEY
-	const API_KEY = "&apiKey=1cc618fa1481485e84da702af0191634";
+	const API_KEY = "&apiKey=8aecc0a91be54e3c9cc4bfe9d6d468f2";
 	const BASE_URL = "https://api.spoonacular.com/recipes/";
 	const FILTER_PARAMS = getFilterString(filters);
 

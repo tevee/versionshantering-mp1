@@ -1,4 +1,4 @@
-import { createStoredIngredientsEl, createAndAppendElement, createInstructionsForRecipe } from "./createElement.js";
+import { createStoredIngredientsEl, createAndAppendElement, createInstructionsForRecipe, createGlutenFreeRecipesEl } from "./createElement.js";
 
 export function displaySearchedIngredients(savedResultObj) {
 
@@ -42,7 +42,6 @@ export function displayRecipe(data) {
         gridItemEl.classList.add('image')
         createAndAppendElement('img', recipe.image, gridItemEl);
         createAndAppendElement('h2', recipe.title, gridItemEl);
-    
     }
 }
 
@@ -102,5 +101,11 @@ export function displayInstructionsForRecipe(recipeArr) {
         console.log(recipe.step);
         createInstructionsForRecipe(recipe.step)
     })
+}
 
+export function displayGlutenFreeRecipes(obj) {
+
+    obj.results.forEach(recipe => {
+        createGlutenFreeRecipesEl(recipe)
+    })
 }
