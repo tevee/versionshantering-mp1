@@ -19,11 +19,7 @@
     <!--Header-->
     <header>
       <div id="heading">
-        <h1>
-          <a class="h1FontFamily" class="toggleFontColor" href="/"
-            >Chefs Kiss</a
-          >
-        </h1>
+        <h1 class="toggleFontColor">Chefs Kiss</h1>
         <div id="themeMode">
           <input type="checkbox" id="toggleMode" />
           <label for="toggleMode" class="slidebar"></label>
@@ -47,10 +43,13 @@
           </svg>
         </div>
         <nav class="sidebar">
-          <button id="home" class="toggleFontColor nav-link active">Discover</button>
+          <button id="home" class="toggleFontColor nav-link active">
+            Discover
+          </button>
           <button id="recipes" class="toggleFontColor nav-link">Recipes</button>
           <button id="contact" class="toggleFontColor nav-link">Contact</button>
           <button id="about" class="toggleFontColor nav-link">About Us</button>
+
           <div class="close">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -93,11 +92,35 @@
             <form id="searchRecipe">
               <button>Search</button>
             </form>
-            <h2 class="toggleFontColor"></h2>
+            <h2></h2>
             <div id="contentContainer"></div>
             <div id="popup-Content"></div>
           </div>
+          <div id="popup-Content"></div>
         </div>
+        <!-- här slutar popup:en -->
+
+        <div id="popup-Content">
+          <div id="img-Popup">
+            <img src="" alt="" />
+          </div>
+          <div id="text-Content"></div>
+        </div>
+        <!-- här slutar popup:en -->
+        <!-- </div>
+
+        <div id="popup-Content">
+          <div id="img-Popup">
+            <img src="" alt="" />
+          </div>
+          <div id="text-Content"></div>
+
+           här slutar popup:en -->
+
+        <!-- <div id="popup-Content"></div> -->
+        <!-- här slutar popup:en -->
+        <!-- </div> -->
+
         <!-- här slutar popup:en -->
 
         <div id="contact-panel" class="tab-panel">
@@ -129,7 +152,7 @@
           </div>
         </div>
 
-        <div id="about-panel" class="tab-panel">
+        <div id="about-panel" class="tab-panel ">
           <!-- ABOUT HTML GOES HERE -->
           <h2 class="toggleFontColor">Meet the chefs!</h2>
           <main class="aboutMainWrapper">
