@@ -610,12 +610,12 @@ footer {
   .aboutMainWrapper {
     display: grid;
     grid-template-columns: (3, 1fr);
-    gap: 2px;
+    gap: 1px;
   }
 
-  /* .chefcard {
-		width: calc(33.33% - 20px); 
-	} */
+  .chefcard {
+		width: auto; 
+	}
 
   /* recipe desktop */
   .recipesWrapper {
