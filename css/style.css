@@ -295,6 +295,10 @@ nav a {
   height: 30px;
   border: none;
   width: 520px;
+  color: var(--textColor);
+}
+#searchRecipe button{
+  color: var(--textColor);
 }
 
 .search:after {
@@ -314,6 +318,7 @@ nav a {
   width: 30px;
   border: none;
   background-color: var(--backgroundColor);
+  color: var(--textColor);
 }
 
 .fa-solid:hover {
