@@ -2,7 +2,7 @@ import {
 	getRandomRecipes,
 	getRecipesByIngredients,
 	getInstructionsFromRecipeById,
-	getRecipesWithComplexSearch
+	// getRecipesWithComplexSearch
 } from "./modules/fetchAPI.js";
 import {
 	displaySearchedIngredients,

@@ -618,6 +618,38 @@ footer {
   }
 
   .chefcard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .chefcard img {
+	display: flex;
+	justify-content: center;
+	max-width: 190px;
+	margin-left: 10px;
+  }
+  
+  .text-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .chefcard h3,
+  .chefcard p {
+	margin: 5px;
+	font-size: 15px;
+  }
+
+  .chefcard:nth-child(even) {
+	margin-left: 0px;
+  }
+  
+  /* ändrar ordningen för text-container */
+  .chefcard:nth-child(even) .text-container {
+	order: 0;
     width: auto;
   }
 
