@@ -1,8 +1,7 @@
 import {
-  getRandomRecipes,
-  getRecipesByIngredients,
-  getInstructionsFromRecipeById,
-  // getRecipesWithComplexSearch
+	getRandomRecipes,
+	getRecipesByIngredients,
+	getInstructionsFromRecipeById,
 } from "./modules/fetchAPI.js";
 import {
   displaySearchedIngredients,
@@ -44,25 +43,22 @@ const savedResults = {
 // .then(displayGlutenFreeRecipes)
 // .catch(error => displayError(error))
 
-themeModeEl.addEventListener("change", (event) => {
-  event.preventDefault();
-  const checkboxEl = document.querySelector("#toggleMode").checked;
-  const allElements = document.querySelectorAll(".toggleFontColor");
+themeModeEl.addEventListener('change', event => {
+	event.preventDefault()
+	const checkboxEl = document.querySelector('#toggleMode').checked
 
-  allElements.forEach((element) => {
-    if (checkboxEl) {
-      document.body.style.background =
-        "linear-gradient(0deg,rgb(46, 56, 45) 0%,rgba(144, 144, 144, 0.667) 100%)";
-      element.classList.add("darkmode");
-      console.log("off");
-    } else {
-      document.body.style.background =
-        "linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%)";
-      element.classList.remove("darkmode");
-      console.log("on");
-    }
-  });
-});
+	if(checkboxEl) {
+		document.documentElement.style.setProperty('--backgroundColor', 'green')
+		document.documentElement.style.setProperty('--textColor', 'red')
+		console.log('off');
+	}
+	else {
+		document.documentElement.style.setProperty('--backgroundColor', 'inherit')
+		document.documentElement.style.setProperty('--textColor', 'inherit')
+		console.log('on');
+	}
+})
+
 
 ingredientsFormEl.addEventListener("submit", (event) => {
   event.preventDefault();
