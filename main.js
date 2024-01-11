@@ -121,4 +121,13 @@ contentContainerEl.addEventListener('click', (event)=>{
 		.then(result => displayInstructionsForRecipe(result, recipeCardEl))
 		.catch(error => displayError(error))
 	}
+	else if(event.target.value === 'popUpBtnClose'){
+		const popUpWindow = document.querySelector('.popUpDiv');
+		popUpWindow.classList.remove('popUpDiv');
+		popUpWindow.remove();
+	}
 })
+
+
+
+

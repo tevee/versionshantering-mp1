@@ -76,31 +76,38 @@ export function displayRecipeByIngredients(data){
         createAndAppendElement('img', recipe.image, recipeCard);
         createAndAppendElement('h1', recipe.title, recipeCard);
         createAndAppendElement('h3', 'Ingredients:', recipeCard);
-       const recipeCardBtn = createAndAppendElement('button', 'Get description', recipeCard);
-
-       recipeCardBtn.classList.add('recipeCardBtn');
-       recipeCardBtn.id = recipe.id
-       recipeCardBtn.value = 'recipeCardBtn'
-  
+        
         for (const ingredient of recipe.missedIngredients) {
             createAndAppendElement('p', ingredient.original, recipeCard);
         }
-  
+        
         for(const ingredient of recipe.usedIngredients){
             createAndAppendElement('p', ingredient.original, recipeCard);
         }
-  
+        const recipeCardBtn = createAndAppendElement('button', 'Get instructions', recipeCard);
+        recipeCardBtn.classList.add('recipeCardBtn');
+        recipeCardBtn.id = recipe.id
+        recipeCardBtn.value = 'recipeCardBtn'
         contentContainer.append(recipeCard);
     }
 }
 
 export function displayInstructionsForRecipe(recipeArr, container) {
     const recipeStepsArr = recipeArr[0].steps
-
+    const popUpDiv = createAndAppendElement('div', '', container)
+    popUpDiv.classList.add('popUpDiv');
+    
+    
+    createAndAppendElement('h3', 'Instructions:', popUpDiv)
+    
     recipeStepsArr.forEach(recipe => {
         console.log(recipe.step);
-        createInstructionsForRecipe(recipe.step, container)
+        createInstructionsForRecipe(recipe.step, popUpDiv)
     })
+    const popUpButton = createAndAppendElement('button', 'Close', popUpDiv);
+    popUpButton.classList.add('popUpButton');
+    popUpButton.value = 'popUpBtnClose';
+
 }
 
 export function displayGlutenFreeRecipes(obj) {
@@ -109,3 +116,4 @@ export function displayGlutenFreeRecipes(obj) {
         createGlutenFreeRecipesEl(recipe)
     })
 }
+
