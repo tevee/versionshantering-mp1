@@ -20,13 +20,8 @@ export function createStoredIngredientsEl(ingredient) {
     button.value = ingredient
 }
 
-export function createInstructionsForRecipe(steps) {
-    const contentContainerEl = document.querySelector('#contentContainer')
-
-    const recipeCard = createAndAppendElement('div', '', contentContainerEl)
-    recipeCard.classList.add('recipe-card')
-
-    createAndAppendElement('p', steps, recipeCard)
+export function createInstructionsForRecipe(steps, container) {
+    createAndAppendElement('p', steps, container) 
 }
 
 export function createGlutenFreeRecipesEl(recipe) {

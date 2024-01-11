@@ -19,15 +19,38 @@
     <!--Header-->
     <header>
       <div id="heading">
-        <div class="h1AndThemeMode">
-          <h1 class="toggleFontColor">Chefs Kiss</h1>
-          <div id="themeMode">
-            <input type="checkbox" id="toggleMode" />
-            <label for="toggleMode" class="slidebar"></label>
-          </div>
+        <h1 class="toggleFontColor">Chefs Kiss</h1>
+        <div id="themeMode">
+          <input type="checkbox" id="toggleMode" />
+          <label for="toggleMode" class="slidebar"></label>
         </div>
-        <section class="navWrapper">
-          <div class="hamburger">
+      </div>
+    </header>
+    <!--///Header-->
+
+    <main>
+      <section class="navWrapper">
+        <div class="hamburger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="26"
+            viewBox="0 -960 960 960"
+            width="26"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            />
+          </svg>
+        </div>
+        <nav class="sidebar">
+          <button id="home" class="toggleFontColor nav-link active">
+            Discover
+          </button>
+          <button id="recipes" class="toggleFontColor nav-link">Recipes</button>
+          <button id="contact" class="toggleFontColor nav-link">Contact</button>
+          <button id="about" class="toggleFontColor nav-link">About Us</button>
+
+          <div class="close">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="26"
@@ -35,35 +58,14 @@
               width="26"
             >
               <path
-                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
               />
             </svg>
           </div>
-          <nav class="sidebar">
-            <button id="home" class="nav-link active">Discover</button>
-            <button id="recipes" class="nav-link">Recipes</button>
-            <button id="contact" class="nav-link">Contact</button>
-            <button id="about" class="nav-link">About Us</button>
-            <div class="close">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="26"
-                viewBox="0 -960 960 960"
-                width="26"
-              >
-                <path
-                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                />
-              </svg>
-            </div>
-          </nav>
-        </section>
-      </div>
-      <div class="navBorderBottom"></div>
-    </header>
-    <!--///Header-->
+        </nav>
+        <div class="navBorderBottom"></div>
+      </section>
 
-    <main>
       <section id="mainContainer">
         <div id="home-panel" class="tab-panel active">
           <!-- DISCOVER PAGE HTML GOES HERE -->
@@ -92,21 +94,15 @@
           <h2></h2>
           <div id="contentContainer"></div>
           <!-- här är kod för popup:en -->
-          <!-- <button id="open-Popup">Open popup</button>
-					<div id="popup-Content">
-					  <div id="img-Popup">
-						<img src="" alt="" />
-					  </div>
-					  <div id="text-Content">
-						<h2>Rubrik</h2>
-						<p>
-						  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
-						  voluptatibus in nobis, suscipit deleniti nostrum debitis consequatur
-						  ut, error quia quasi, maxime quo commodi nisi?
-						</p>
-						<button id="close-Popup">Close</button>
-					  </div>
-					</div> -->
+
+          <div id="popup-Content">
+            <div id="img-Popup">
+              <img src="" alt="" />
+            </div>
+            <div id="text-Content">
+              <button id="close-Popup">Close</button>
+            </div>
+          </div>
           <!-- här slutar popup:en -->
         </div>
 

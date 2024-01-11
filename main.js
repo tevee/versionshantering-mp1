@@ -45,19 +45,22 @@ const savedResults = {
 themeModeEl.addEventListener('change', event => {
 	event.preventDefault()
 	const checkboxEl = document.querySelector('#toggleMode').checked
-	const slidebarEl = document.querySelector('.slidebar')
-	const allElementWithClassTest = document.querySelectorAll('.test')
-	console.log(allElementWithClassTest);
+	const allElements = document.querySelectorAll('.toggleFontColor')
 
-	if(checkboxEl) {
-		slidebarEl.style.background = '#242424';
-		document.body.style.background = 'linear-gradient(0deg,rgb(46, 56, 45) 0%,rgba(144, 144, 144, 0.667) 100%)';
-	}
-	else {
-		slidebarEl.style.background = 'linear-gradient(#c4c5c7 0%, #dcdddf 52%, #ebebeb 100%)';
-		document.body.style.background = 'linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%)'
-	}
+	allElements.forEach(element => {
+		if(checkboxEl) {
+			document.body.style.background = 'linear-gradient(0deg,rgb(46, 56, 45) 0%,rgba(144, 144, 144, 0.667) 100%)';
+			element.classList.add('darkmode')
+			console.log('off');
+		}
+		else {
+			document.body.style.background = 'linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%)'
+			element.classList.remove('darkmode')
+			console.log('on');
+		}
+	})
 })
+
 
 ingredientsFormEl.addEventListener("submit", (event) => {
 	event.preventDefault();
@@ -111,9 +114,11 @@ contentContainerEl.addEventListener('click', (event)=>{
 	event.preventDefault();
 	
 	if(event.target.value === 'recipeCardBtn'){
+		const recipeCardButton = document.getElementById(event.target.id)
+		const recipeCardEl = recipeCardButton.parentElement
 		
 		getInstructionsFromRecipeById(event.target.id)
-		.then(displayInstructionsForRecipe)
+		.then(result => displayInstructionsForRecipe(result, recipeCardEl))
 		.catch(error => displayError(error))
 	}
 })

@@ -94,12 +94,12 @@ export function displayRecipeByIngredients(data){
     }
 }
 
-export function displayInstructionsForRecipe(recipeArr) {
+export function displayInstructionsForRecipe(recipeArr, container) {
     const recipeStepsArr = recipeArr[0].steps
 
     recipeStepsArr.forEach(recipe => {
         console.log(recipe.step);
-        createInstructionsForRecipe(recipe.step)
+        createInstructionsForRecipe(recipe.step, container)
     })
 }
 
