@@ -33,6 +33,12 @@ body {
   height: 100vh;
   padding: 20px;
   background: var(--backgroundColor);
+  background-color: #CBCBCB;
+  /* background: linear-gradient(
+    0deg,
+    rgb(179, 212, 176) 0%,
+    rgba(255, 255, 255, 0.667) 100%
+  ); */
   background-attachment: fixed;
 }
 
