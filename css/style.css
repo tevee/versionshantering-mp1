@@ -383,7 +383,8 @@ nav a {
   height: 25px;
   margin-bottom: 10px;
   padding-left: 10px;
-  background-color: rgba(255, 255, 255, 0.408);
+  background-color: white;
+  border-radius: 5px;
 }
 
 #inputEmail {
@@ -391,7 +392,8 @@ nav a {
   height: 25px;
   margin-bottom: 30px;
   padding-left: 10px;
-  background-color: rgba(255, 255, 255, 0.408);
+  background-color: white;
+  border-radius: 5px;
 }
 
 .textArea {
@@ -402,7 +404,8 @@ nav a {
   width: 100%;
   margin-bottom: 30px;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.408);
+  background-color: white;
+  border-radius: 5px;
 }
 
 #btnContact {
