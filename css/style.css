@@ -617,9 +617,8 @@ footer {
 		width: calc(33.33% - 20px); 
 	} */
 
-  /* FUNKAR EJ SOM DET SKA */
   /* recipe desktop */
-  /* #recipes-panel {
+  .recipesWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -633,7 +632,7 @@ footer {
   #storedIngredientsContainer {
     width: 570px;
  
-  } */
+  }
   /* /// recipe desktop */
 
   /* contact desktop */
