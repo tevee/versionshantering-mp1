@@ -43,14 +43,13 @@
           </svg>
         </div>
         <nav class="sidebar">
-            <div class="close">
           <button id="home" class="toggleFontColor nav-link active">
             Discover
           </button>
           <button id="recipes" class="toggleFontColor nav-link">Recipes</button>
           <button id="contact" class="toggleFontColor nav-link">Contact</button>
           <button id="about" class="toggleFontColor nav-link">About Us</button>
-        
+          <div class="close">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="26"
@@ -73,47 +72,40 @@
           <div id="discoverContainer"></div>
         </div>
 
-				<div id="recipes-panel" class="tab-panel">
+        <div id="recipes-panel" class="tab-panel">
           <div class="recipesWrapper">
-            <h2 class="toggleFontColor ">Search for recipes</h2>
-					  <!-- RECIPES HTML GOES HERE -->
-					  <form id="getIngredientsForm">
-					  	<input
-					  		type="text"
-					  		class="search"
-					  		placeholder="Ingredients..."
-					  		required
-					  	/>
-					  	<button type="submit">
-					  		<i class="fa-solid">+</i>
-					  	</button>
-					  </form>
-					  <div id="storedIngredientsContainer"></div>
-					  <form id="searchRecipe">
-					  	<button>Search</button>
-					  </form>
-					  <h2></h2>
-					  <div id="contentContainer"></div>
-					  <!-- här är kod för popup:en -->
-					</div>
-					<div id="popup-Content">
-					  
-					  </div> 
-					</div> 
-					<!-- här slutar popup:en -->
-				</div>
-
-            <div id="popup-Content">
-              <div id="img-Popup">
-                <img src="" alt="" />
-              </div>
-              <div id="text-Content">
-                
-            </div>
-            </div>
-          <!-- här slutar popup:en -->
+            <h2 class="toggleFontColor">Search for recipes</h2>
+            <!-- RECIPES HTML GOES HERE -->
+            <form id="getIngredientsForm">
+              <input
+                type="text"
+                class="search"
+                placeholder="Ingredients..."
+                required
+              />
+              <button type="submit">
+                <i class="fa-solid">+</i>
+              </button>
+            </form>
+            <div id="storedIngredientsContainer"></div>
+            <form id="searchRecipe">
+              <button>Search</button>
+            </form>
+            <h2></h2>
+            <div id="contentContainer"></div>
+            <!-- här är kod för popup:en -->
           </div>
+          <div id="popup-Content"></div>
+          <!-- här slutar popup:en -->
         </div>
+
+        <div id="popup-Content">
+          <div id="img-Popup">
+            <img src="" alt="" />
+          </div>
+          <div id="text-Content"></div>
+        </div>
+        <!-- här slutar popup:en -->
 
         <div id="contact-panel" class="tab-panel">
           <!-- CONTACT HTML GOES HERE -->
