@@ -30,6 +30,8 @@ const searchRecipeFormEl = document.querySelector("#searchRecipe");
 const storedIngredientsContainerEl = document.querySelector("#storedIngredientsContainer");
 const themeModeEl = document.querySelector('#themeMode');
 
+
+
 const savedResults = {
 	ingredients: [],
 };
