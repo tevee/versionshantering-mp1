@@ -74,20 +74,15 @@ export function displayRecipeByIngredients(data){
         recipeCard.classList.add('recipe-card')
   
         createAndAppendElement('img', recipe.image, recipeCard);
-        const h2El = createAndAppendElement('h2', recipe.title, recipeCard);
-        h2El.classList.add('toggleFontColor');
-
-        const h3El = createAndAppendElement('h3', 'Ingredients:', recipeCard);
-        h3El.classList.add('toogleFontColor');
+        createAndAppendElement('h2', recipe.title, recipeCard);
+        createAndAppendElement('h3', 'Ingredients:', recipeCard);
         
         for (const ingredient of recipe.missedIngredients) {
-            const pMissed = createAndAppendElement('p', ingredient.original, recipeCard);
-            pMissed.classList.add('toggleFontColor');
+            createAndAppendElement('p', ingredient.original, recipeCard);
         }
         
         for(const ingredient of recipe.usedIngredients){
-            const pUsed = createAndAppendElement('p', ingredient.original, recipeCard);
-            pUsed.classList.add('toggleFontColor');
+            createAndAppendElement('p', ingredient.original, recipeCard);
         }
         const recipeCardBtn = createAndAppendElement('button', 'Get instructions', recipeCard);
         recipeCardBtn.classList.add('recipeCardBtn');
