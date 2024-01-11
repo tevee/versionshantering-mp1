@@ -8,6 +8,19 @@
   src: url("../fonts/nunito.ttf");
 }
 
+:root{
+  --textColor: black;
+  --backgroundColor:white;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --textColor: white;
+    --backgroundColor:black;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,11 +32,7 @@
 body {
   height: 100vh;
   padding: 20px;
-  background: linear-gradient(
-    0deg,
-    rgb(179, 212, 176) 0%,
-    rgba(255, 255, 255, 0.667) 100%
-  );
+  background: var(--backgroundColor);
   background-attachment: fixed;
 }
 
@@ -45,13 +54,6 @@ h2 {
 
 button {
   cursor: pointer;
-}
-
-/* .darkmode {
- 	.toggleFontColor {
-	  color: white;
-	  text-shadow: 3px 2px 5px rgb(2, 2, 2);
-	}
 }
 
 /* Styling for navbar mobile */
