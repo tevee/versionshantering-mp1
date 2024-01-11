@@ -74,9 +74,8 @@ export function displayRecipeByIngredients(data){
         recipeCard.classList.add('recipe-card')
   
         createAndAppendElement('img', recipe.image, recipeCard);
-       createAndAppendElement('h1', recipe.title, recipeCard);
-       
-        
+        const h1El = createAndAppendElement('h1', recipe.title, recipeCard);
+        h1El.classList.add('toggleFontColor')
 
         createAndAppendElement('h3', 'Ingredients:', recipeCard);
         

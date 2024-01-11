@@ -48,13 +48,6 @@ button {
   cursor: pointer;
 }
 
-/* .darkmode {
- 	.toggleFontColor {
-	  color: white;
-	  text-shadow: 3px 2px 5px rgb(2, 2, 2);
-	}
-}
-
 /* Styling for navbar mobile */
 nav ul {
   width: 100%;
@@ -514,7 +507,8 @@ footer {
 
 /* Sökta ingredients element */
 #storedIngredientsContainer {
-  display: flex;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .storedIngredientsWrapper {
@@ -561,6 +555,11 @@ footer {
 }
 
 /* toggle darkmode */
+.darkmode {
+	color: white;
+	text-shadow: 3px 2px 5px rgb(2, 2, 2);
+}
+
 .slidebar {
   width: 60px;
   height: 30px;
