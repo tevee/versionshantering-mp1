@@ -4,14 +4,14 @@ import {
 	getInstructionsFromRecipeById,
 } from "./modules/fetchAPI.js";
 import {
-  displaySearchedIngredients,
-  removePrevIngredientSearch,
-  displayError,
-  removePrevRecipeSearch,
-  displayRecipe,
-  displayRecipeByIngredients,
-  displayInstructionsForRecipe,
-  displayGlutenFreeRecipes,
+	displaySearchedIngredients,
+	removePrevIngredientSearch,
+	displayError,
+	removePrevRecipeSearch,
+	displayRecipe,
+	displayRecipeByIngredients,
+	displayInstructionsForRecipe,
+	displayGlutenFreeRecipes,
 } from "./modules/display.js";
 import { handleTabClick } from "./modules/tabs.js";
 import { showSidebar, hideSidebar } from "./modules/hamburger.js";
@@ -27,102 +27,110 @@ const contentContainerEl = document.querySelector("#contentContainer");
 const ingredientsFormEl = document.querySelector("#getIngredientsForm");
 const searchRecipeFormEl = document.querySelector("#searchRecipe");
 const storedIngredientsContainerEl = document.querySelector(
-  "#storedIngredientsContainer"
+	"#storedIngredientsContainer"
 );
 const themeModeEl = document.querySelector("#themeMode");
 
 const savedResults = {
-  ingredients: [],
+	ingredients: [],
 };
 
-//  getRandomRecipes({ number: 5 })
-// 	.then(displayRecipe)
+// getRandomRecipes({ number: 5 })
+// 	.then((data) => {
+// 		displayRecipe(data, "discoverRandom");
+// 	})
 // 	.catch((error) => displayError(error));
 
-// getRecipesWithComplexSearch({diet: 'gluten%20free', number: 5})
-// .then(displayGlutenFreeRecipes)
-// .catch(error => displayError(error))
+// getRandomRecipes({ excludeTags: "gluten", number: 5 })
+// 	.then((data) => {
+// 		displayRecipe(data, "discoverVegan");
+// 	})
+// 	.catch((error) => displayError(error));
 
-themeModeEl.addEventListener('change', event => {
-	event.preventDefault()
-	const checkboxEl = document.querySelector('#toggleMode').checked
+// getRandomRecipes({ includeTags: "vegan", number: 5 })
+// 	.then((data) => {
+// 		displayRecipe(data, "discoverGlutenFree");
+// 	})
+// 	.catch((error) => displayError(error));
 
-	if(checkboxEl) {
-		document.documentElement.style.setProperty('--backgroundColor', 'green')
-		document.documentElement.style.setProperty('--textColor', 'red')
-		console.log('off');
+themeModeEl.addEventListener("change", (event) => {
+	event.preventDefault();
+	const checkboxEl = document.querySelector("#toggleMode").checked;
+
+	if (checkboxEl) {
+		document.documentElement.style.setProperty("--backgroundColor", "green");
+		document.documentElement.style.setProperty("--textColor", "red");
+		console.log("off");
+	} else {
+		document.documentElement.style.setProperty("--backgroundColor", "inherit");
+		document.documentElement.style.setProperty("--textColor", "inherit");
+		console.log("on");
 	}
-	else {
-		document.documentElement.style.setProperty('--backgroundColor', 'inherit')
-		document.documentElement.style.setProperty('--textColor', 'inherit')
-		console.log('on');
-	}
-})
-
+});
 
 ingredientsFormEl.addEventListener("submit", (event) => {
-  event.preventDefault();
-  removePrevIngredientSearch();
-  const inputElValue = document.querySelector(
-    "#getIngredientsForm > input"
-  ).value;
+	event.preventDefault();
+	removePrevIngredientSearch();
+	const inputElValue = document.querySelector(
+		"#getIngredientsForm > input"
+	).value;
 
-  savedResults.ingredients.push(inputElValue);
-  console.log(savedResults.ingredients);
+	savedResults.ingredients.push(inputElValue);
+	console.log(savedResults.ingredients);
 
-  displaySearchedIngredients(savedResults);
+	displaySearchedIngredients(savedResults);
 
-  ingredientsFormEl.reset();
+	ingredientsFormEl.reset();
 });
 
 storedIngredientsContainerEl.addEventListener("click", (event) => {
-  event.preventDefault();
+	event.preventDefault();
 
-  savedResults.ingredients.forEach((ingredient) => {
-    if (event.target.value === ingredient) {
-      const indexOfIngredient = savedResults.ingredients.indexOf(ingredient);
-      savedResults.ingredients.splice(indexOfIngredient, 1);
-      console.log(savedResults.ingredients);
-      event.target.parentElement.remove();
-    }
-  });
+	savedResults.ingredients.forEach((ingredient) => {
+		if (event.target.value === ingredient) {
+			const indexOfIngredient = savedResults.ingredients.indexOf(ingredient);
+			savedResults.ingredients.splice(indexOfIngredient, 1);
+			console.log(savedResults.ingredients);
+			event.target.parentElement.remove();
+		}
+	});
 });
 
 searchRecipeFormEl.addEventListener("submit", (event) => {
-  event.preventDefault();
+	event.preventDefault();
 
-  if (savedResults.ingredients.length !== 0) {
-    const displaySearchedIngredientsEl = searchRecipeFormEl.nextElementSibling;
-    displaySearchedIngredientsEl.innerText = `Searched Ingredients: ${savedResults.ingredients}`;
+	if (savedResults.ingredients.length !== 0) {
+		const displaySearchedIngredientsEl = searchRecipeFormEl.nextElementSibling;
+		displaySearchedIngredientsEl.innerText = `Searched Ingredients: ${savedResults.ingredients}`;
 
-    getRecipesByIngredients(savedResults)
-      .then((results) => {
-        removePrevIngredientSearch();
-        removePrevRecipeSearch();
-        savedResults.ingredients = [];
-        displayRecipeByIngredients(results);
-      })
-      .catch((error) => {
-        displaySearchedIngredientsEl.innerText = "";
-        savedResults.ingredients = [];
-        displayError(error);
-      });
-  }
+		getRecipesByIngredients(savedResults)
+			.then((results) => {
+				removePrevIngredientSearch();
+				removePrevRecipeSearch();
+				savedResults.ingredients = [];
+				displayRecipeByIngredients(results);
+			})
+			.catch((error) => {
+				displaySearchedIngredientsEl.innerText = "";
+				savedResults.ingredients = [];
+				displayError(error);
+			});
+	}
 });
 
 contentContainerEl.addEventListener("click", (event) => {
-  event.preventDefault();
+	event.preventDefault();
 
-  if (event.target.value === "recipeCardBtn") {
-    const recipeCardButton = document.getElementById(event.target.id);
-    const recipeCardEl = recipeCardButton.parentElement;
+	if (event.target.value === "recipeCardBtn") {
+		const recipeCardButton = document.getElementById(event.target.id);
+		const recipeCardEl = recipeCardButton.parentElement;
 
-    getInstructionsFromRecipeById(event.target.id)
-      .then((result) => displayInstructionsForRecipe(result, recipeCardEl))
-      .catch((error) => displayError(error));
-  } else if (event.target.value === "popUpBtnClose") {
-    const popUpWindow = document.querySelector(".popUpDiv");
-    popUpWindow.classList.remove("popUpDiv");
-    popUpWindow.remove();
-  }
+		getInstructionsFromRecipeById(event.target.id)
+			.then((result) => displayInstructionsForRecipe(result, recipeCardEl))
+			.catch((error) => displayError(error));
+	} else if (event.target.value === "popUpBtnClose") {
+		const popUpWindow = document.querySelector(".popUpDiv");
+		popUpWindow.classList.remove("popUpDiv");
+		popUpWindow.remove();
+	}
 });
