@@ -420,6 +420,7 @@ nav a {
   width: 20%;
   align-self: flex-end;
   height: 30px;
+  color: var(--textColor);
   background-color: var(--backgroundColor);
   border-radius: 5px;
 }
@@ -698,12 +699,16 @@ footer {
 		align-items: center;
 		gap: 60px;
 	}
+  #socialIcons a{
+    color: var(--textColor);
+  }
 
 	.footer-content {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 25px;
+    color: var(--textColor)
 	}
 	/* ///footer desktop */
 
