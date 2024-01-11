@@ -19,22 +19,18 @@
 body {
   height: 100vh;
   padding: 20px;
-  background-color: #ebebeb;
-  /* background: linear-gradient(
+  background: linear-gradient(
     0deg,
     rgb(179, 212, 176) 0%,
     rgba(255, 255, 255, 0.667) 100%
-  ); */
+  );
   background-attachment: fixed;
-}
-
-.h1FontFamily {
-  font-family: "title";
 }
 
 h1 {
   font-size: 40px;
   text-align: center;
+  font-family: "title";
   color: black;
   text-shadow: 3px 2px 5px rgb(255, 255, 255);
 }
@@ -49,6 +45,13 @@ h2 {
 
 button {
   cursor: pointer;
+}
+
+/* .darkmode {
+ 	.toggleFontColor {
+	  color: white;
+	  text-shadow: 3px 2px 5px rgb(2, 2, 2);
+	}
 }
 
 /* Styling for navbar mobile */
@@ -129,7 +132,7 @@ nav a {
   }
 
   .close {
-    display: flex;
+    display: block;
     /* flex-direction: column; */
   }
 }
@@ -253,6 +256,9 @@ nav a {
 /* ///discover css*/
 
 /* recipe css */
+#recipes-panel {
+}
+
 #getIngredientsForm {
   background-color: white;
   height: 30px;
@@ -262,10 +268,12 @@ nav a {
   justify-content: space-between;
   padding-left: 10px;
 }
+
 #getIngredientsForm > button {
   border-radius: 15px;
   border: none;
 }
+
 .search {
   height: 30px;
   border: none;
@@ -328,6 +336,7 @@ nav a {
 .storedIngredientsWrapper > button {
   border: none;
   background-color: white;
+  background-color: white;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -337,30 +346,36 @@ nav a {
   margin-left: 5px;
   font-size: 13px;
 }
+/* ///recipe css */
 
-/* recipe css */
-
-.popUpDiv {
-  position: absolute;
-
-  background: linear-gradient(
-    0deg,
-    rgb(179, 212, 176) 0%,
-    rgba(255, 255, 255, 0.667) 100%
-  );
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 0px 10px 10px 0;
-  width: 280px;
-  height: 620px;
+/* popup-Window */
+/* #popup-Content{ */
+/* display: none; */
+/* display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 90%;
 }
-.recipeCardBtn {
-  margin-top: 10px;
+#img-Popup{
+    width: 100%;
+    height: auto;
+    border-right: 1px solid black;
 }
+#text-Content{
+    background: linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%);
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0px 10px 10px 0;
+} */
 
-.popUpButton {
-  margin-top: 10px;
-}
 /* contact css */
 #contactForm {
   display: flex;
@@ -378,8 +393,7 @@ nav a {
   height: 25px;
   margin-bottom: 10px;
   padding-left: 10px;
-  background-color: white;
-  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.408);
 }
 
 #inputEmail {
@@ -387,23 +401,26 @@ nav a {
   height: 25px;
   margin-bottom: 30px;
   padding-left: 10px;
-  background-color: white;
-  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.408);
 }
 
 .textArea {
   height: 100px;
   width: 100%;
   margin-bottom: 10px;
+  height: 150px;
+  width: 100%;
+  margin-bottom: 30px;
   padding: 10px;
-  background-color: white;
-  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.408);
 }
 
 #btnContact {
   width: 20%;
   align-self: flex-end;
+  width: 20%;
   height: 30px;
+  align-self: flex-end;
   background-color: white;
   border-radius: 5px;
 }
@@ -486,8 +503,9 @@ footer {
 #socialIcons a:hover {
   margin: 10px;
   padding: 5px;
-  font-size: 35px;
+  font-size: 40px;
   color: rgb(40, 40, 40);
+  margin: 10px;
 }
 
 .footer-content {
@@ -498,8 +516,7 @@ footer {
 
 /* Sökta ingredients element */
 #storedIngredientsContainer {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
 }
 
 .storedIngredientsWrapper {
@@ -514,22 +531,13 @@ footer {
 #contentContainer {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
 }
 
 .recipe-card {
   display: flex;
   flex-direction: column;
-}
-
-.recipe-card > h1 {
-  font-size: 20px;
-  display: flex;
-  flex-grow: 1;
-}
-.recipe-card > h3 {
-  font-size: 14px;
 }
 
 /* Heading */
@@ -546,11 +554,6 @@ footer {
 }
 
 /* toggle darkmode */
-.darkmode {
-	color: white;
-	text-shadow: 3px 2px 5px rgb(2, 2, 2);
-}
-
 .slidebar {
   width: 60px;
   height: 30px;
@@ -606,34 +609,32 @@ footer {
   }
 
   .aboutMainWrapper {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	border-radius: 10px;
-	padding: 20px;
-	box-sizing: border-box;
-	background-color: rgba(255, 255, 255, 0.209);
-	border: 2px solid rgba(119, 129, 119, 0.24);
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    gap: 2px;
   }
 
-  .chefcard {
-    width: auto;
-  }
+  /* .chefcard {
+		width: calc(33.33% - 20px); 
+	} */
 
+  /* FUNKAR EJ SOM DET SKA */
   /* recipe desktop */
-  .recipesWrapper {
+  /* #recipes-panel {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+   
   }
   #getIngredientsForm {
     width: 570px;
+
   }
   #storedIngredientsContainer {
     width: 570px;
-  }
+ 
+  } */
   /* /// recipe desktop */
 
   /* contact desktop */
@@ -647,12 +648,6 @@ footer {
   #contactForm {
     width: 570px;
   }
-
-  /* .popUpDiv{
-	
-	width: 312px;
-	height: 620px;
-} */
   /* ///contact desktop */
 
   /*  */
