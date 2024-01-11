@@ -436,45 +436,50 @@ a {
 
 .aboutMainWrapper {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 	border-radius: 10px;
 	padding: 20px;
 	box-sizing: border-box;
 	background-color: rgba(255, 255, 255, 0.209);
 	border: 2px solid rgba(119, 129, 119, 0.24);
-}
+  }
 
 .chefcard {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	margin-bottom: 20px;
-}
-
-.chefcard img {
-	max-width: 100px;
+  }
+  
+  .chefcard img {
+	display: flex;
+	justify-content: center;
+	max-width: 190px;
 	margin-left: 10px;
-}
-
-.text-container {
+  }
+  
+  .text-container {
 	display: flex;
 	flex-direction: column;
-}
-
-.chefcard h3,
-.chefcard p {
+	align-items: center;
+  }
+  
+  .chefcard h3,
+  .chefcard p {
 	margin: 5px;
 	font-size: 15px;
-}
+  }
 
-/* lägger margin på vänster sida av chefcard class för mellanrum */
-.chefcard:nth-child(even) {
+  .chefcard:nth-child(even) {
 	margin-left: auto;
-}
-
-/* ändrar ordningen för text-container */
-.chefcard:nth-child(even) .text-container {
+  }
+  
+  /* ändrar ordningen för text-container */
+  .chefcard:nth-child(even) .text-container {
 	order: -1;
-}
+  }
 /* ///about css */
 
 /* footer css */
@@ -607,15 +612,50 @@ footer {
 		font-weight: 900;
 	}
 
-	.aboutMainWrapper {
-		display: grid;
-		grid-template-columns: (3, 1fr);
-		gap: 2px;
-	}
+  .aboutMainWrapper {
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: rgba(255, 255, 255, 0.209);
+	border: 2px solid rgba(119, 129, 119, 0.24);
+  }
 
-	/* .chefcard {
-		width: calc(33.33% - 20px); 
-	} */
+  .chefcard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .chefcard img {
+	display: flex;
+	justify-content: center;
+	max-width: 190px;
+	margin-left: 10px;
+  }
+  
+  .text-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .chefcard h3,
+  .chefcard p {
+	margin: 5px;
+	font-size: 15px;
+  }
+
+  .chefcard:nth-child(even) {
+	margin-left: 0px;
+  }
+  
+  /* ändrar ordningen för text-container */
+  .chefcard:nth-child(even) .text-container {
+	order: 0;
+  }
 
 	/* recipe desktop */
 	.recipesWrapper {
