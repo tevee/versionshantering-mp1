@@ -179,7 +179,9 @@ nav a {
 
 /* Tab styling */
 .nav-link {
-  /* styling for buttons goes here */
+  color: var(--textColor);
+  font-size: 16px;
+  padding-top: 20px;
 }
 
 .nav-link.active {
@@ -201,6 +203,11 @@ nav a {
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(3, 250px);
   gap: 1rem;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(147, 147, 147, 0.229);
+  border: 2px solid rgba(137, 137, 137, 0.24);
 }
 
 .gridItem {
@@ -288,6 +295,10 @@ nav a {
   height: 30px;
   border: none;
   width: 520px;
+  color: var(--textColor);
+}
+#searchRecipe button {
+  color: var(--textColor);
 }
 
 .search:after {
@@ -307,6 +318,7 @@ nav a {
   width: 30px;
   border: none;
   background-color: var(--backgroundColor);
+  color: var(--textColor);
 }
 
 .fa-solid:hover {
@@ -361,11 +373,7 @@ nav a {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    0deg,
-    rgb(179, 212, 176) 0%,
-    rgba(255, 255, 255, 0.667) 100%
-  );
+  background: var(--backgroundColor);
   text-align: center;
   border: 1px solid black;
   border-radius: 10px;
@@ -398,7 +406,7 @@ nav a {
   height: 25px;
   margin-bottom: 10px;
   padding-left: 10px;
-  background-color: rgba(255, 255, 255, 0.408);
+  background-color: rgba(255, 255, 255, 0.812);
 }
 
 #inputEmail {
@@ -406,7 +414,7 @@ nav a {
   height: 25px;
   margin-bottom: 30px;
   padding-left: 10px;
-  background-color: rgba(255, 255, 255, 0.408);
+  background-color: rgba(255, 255, 255, 0.812);
 }
 
 .textArea {
@@ -414,7 +422,7 @@ nav a {
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.408);
+  background-color: rgba(255, 255, 255, 0.812);
 }
 
 #btnContact {
