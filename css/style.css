@@ -28,10 +28,13 @@ body {
   background-attachment: fixed;
 }
 
+.h1FontFamily {
+  font-family: "title";
+}
+
 h1 {
   font-size: 40px;
   text-align: center;
-  font-family: "title";
   color: black;
   text-shadow: 3px 2px 5px rgb(255, 255, 255);
 }
@@ -127,7 +130,7 @@ nav a {
 
   .close {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 }
 
