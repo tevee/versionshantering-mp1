@@ -93,60 +93,6 @@ nav a {
   display: none;
 }
 
-.navWrapper {
-  /* display: flex; */
-}
-/* .h1AndThemeMode {
-  display: flex;
-  justify-content: center;
-} */
-
-/* @media (max-width: 600px) {
-  #heading {
-    flex-direction: row;
-  }
-  .h1AndThemeMode {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .navWrapper {
-    margin-top: 27px;
-    padding-left: 4rem;
-  }
-
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-
-  .sidebar .nav-link {
-    border: none;
-    background-color: transparent;
-    padding: 1rem;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .close {
-    display: block;
-  }
-} */
-
 .menu-button {
   display: none;
 }
