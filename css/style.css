@@ -253,9 +253,6 @@ nav a {
 /* ///discover css*/
 
 /* recipe css */
-#recipes-panel {
-}
-
 #getIngredientsForm {
   background-color: white;
   height: 30px;
@@ -265,12 +262,10 @@ nav a {
   justify-content: space-between;
   padding-left: 10px;
 }
-
 #getIngredientsForm > button {
   border-radius: 15px;
   border: none;
 }
-
 .search {
   height: 30px;
   border: none;
@@ -332,7 +327,6 @@ nav a {
 
 .storedIngredientsWrapper > button {
   border: none;
-  background-color: white;
   background-color: white;
   border-radius: 10px;
   display: flex;
@@ -401,9 +395,6 @@ nav a {
   height: 100px;
   width: 100%;
   margin-bottom: 10px;
-  height: 150px;
-  width: 100%;
-  margin-bottom: 30px;
   padding: 10px;
   background-color: white;
   border-radius: 5px;
@@ -412,9 +403,7 @@ nav a {
 #btnContact {
   width: 20%;
   align-self: flex-end;
-  width: 20%;
   height: 30px;
-  align-self: flex-end;
   background-color: white;
   border-radius: 5px;
 }
@@ -499,7 +488,6 @@ footer {
   padding: 5px;
   font-size: 40px;
   color: rgb(40, 40, 40);
-  margin: 10px;
 }
 
 .footer-content {
