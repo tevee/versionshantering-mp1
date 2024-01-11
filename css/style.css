@@ -133,7 +133,8 @@ nav a {
   }
 
   .close {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -223,7 +224,6 @@ nav a {
 .gridItem:nth-child(4) {
   grid-column: 1 / span 4;
 }
-
 
 .gridItem:nth-child(5) {
   grid-column: 5 / span 3;
@@ -350,23 +350,26 @@ nav a {
 
 /* recipe css */
 
-.popUpDiv{
-	position: absolute;
-	
-	background: linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%);
-	text-align: center;
-	border: 1px solid black;
-    border-radius: 0px 10px 10px 0;
-	width: 280px;
-	height: 620px;
-	
+.popUpDiv {
+  position: absolute;
+
+  background: linear-gradient(
+    0deg,
+    rgb(179, 212, 176) 0%,
+    rgba(255, 255, 255, 0.667) 100%
+  );
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 0px 10px 10px 0;
+  width: 280px;
+  height: 620px;
 }
-.recipeCardBtn{
-	margin-top: 10px;
+.recipeCardBtn {
+  margin-top: 10px;
 }
 
-.popUpButton{
-	margin-top: 10px;
+.popUpButton {
+  margin-top: 10px;
 }
 /* contact css */
 #contactForm {
@@ -536,10 +539,10 @@ footer {
 }
 
 .recipe-card > h1 {
-	font-size: 20px;
-	display: flex;
+  font-size: 20px;
+  display: flex;
   flex-grow: 1;
-  }
+}
 .recipe-card > h3 {
   font-size: 14px;
 }
@@ -619,8 +622,8 @@ footer {
   }
 
   .chefcard {
-		width: auto; 
-	}
+    width: auto;
+  }
 
   /* recipe desktop */
   .recipesWrapper {
@@ -628,15 +631,12 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-   
   }
   #getIngredientsForm {
     width: 570px;
-
   }
   #storedIngredientsContainer {
     width: 570px;
- 
   }
   /* /// recipe desktop */
 
