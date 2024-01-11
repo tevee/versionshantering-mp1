@@ -74,7 +74,10 @@ export function displayRecipeByIngredients(data){
         recipeCard.classList.add('recipe-card')
   
         createAndAppendElement('img', recipe.image, recipeCard);
-        createAndAppendElement('h1', recipe.title, recipeCard);
+       createAndAppendElement('h1', recipe.title, recipeCard);
+       
+        
+
         createAndAppendElement('h3', 'Ingredients:', recipeCard);
         
         for (const ingredient of recipe.missedIngredients) {

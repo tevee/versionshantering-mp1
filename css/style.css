@@ -224,6 +224,7 @@ nav a {
   grid-column: 1 / span 4;
 }
 
+
 .gridItem:nth-child(5) {
   grid-column: 5 / span 3;
 }
@@ -351,13 +352,14 @@ nav a {
 
 .popUpDiv{
 	position: absolute;
-	top:-10;
+	
 	background: linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%);
 	text-align: center;
 	border: 1px solid black;
     border-radius: 0px 10px 10px 0;
-	width: 320px;
-	height: 710px;
+	width: 280px;
+	height: 620px;
+	
 }
 .recipeCardBtn{
 	margin-top: 10px;
@@ -524,13 +526,22 @@ footer {
 #contentContainer {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 30px;
 }
 
 .recipe-card {
   display: flex;
   flex-direction: column;
+}
+
+.recipe-card > h1 {
+	font-size: 20px;
+	display: flex;
+  flex-grow: 1;
+  }
+.recipe-card > h3 {
+  font-size: 14px;
 }
 
 /* Heading */
@@ -640,6 +651,12 @@ footer {
   #contactForm {
     width: 570px;
   }
+
+  /* .popUpDiv{
+	
+	width: 312px;
+	height: 620px;
+} */
   /* ///contact desktop */
 
   /*  */

@@ -74,7 +74,7 @@ function generateURL(endpoint, filters, id) {
 	// 83d78591f91c440ead2234603cffd6c3 - Amandas API KEY
 	// deec58bb0fe24310940e44c32d429a87 - Andréas API KEY
 	// 543d189d1b144ef6899166c18c08621f - Elvira API KEY
-	const API_KEY = "&apiKey=543d189d1b144ef6899166c18c08621f";
+	const API_KEY = "&apiKey=83d78591f91c440ead2234603cffd6c3";
 	const BASE_URL = "https://api.spoonacular.com/recipes/";
 	const FILTER_PARAMS = getFilterString(filters);
 
