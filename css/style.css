@@ -28,10 +28,13 @@ body {
   background-attachment: fixed;
 }
 
+.h1FontFamily {
+  font-family: "title";
+}
+
 h1 {
   font-size: 40px;
   text-align: center;
-  font-family: "title";
   color: black;
   text-shadow: 3px 2px 5px rgb(255, 255, 255);
 }
@@ -46,13 +49,6 @@ h2 {
 
 button {
   cursor: pointer;
-}
-
-/* .darkmode {
- 	.toggleFontColor {
-	  color: white;
-	  text-shadow: 3px 2px 5px rgb(2, 2, 2);
-	}
 }
 
 /* Styling for navbar mobile */
@@ -514,7 +510,8 @@ footer {
 
 /* Sökta ingredients element */
 #storedIngredientsContainer {
-  display: flex;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .storedIngredientsWrapper {
@@ -561,6 +558,11 @@ footer {
 }
 
 /* toggle darkmode */
+.darkmode {
+	color: white;
+	text-shadow: 3px 2px 5px rgb(2, 2, 2);
+}
+
 .slidebar {
   width: 60px;
   height: 30px;
