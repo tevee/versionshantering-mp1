@@ -19,11 +19,12 @@
 body {
   height: 100vh;
   padding: 20px;
-  background: linear-gradient(
+  background-color: #ebebeb;
+  /* background: linear-gradient(
     0deg,
     rgb(179, 212, 176) 0%,
     rgba(255, 255, 255, 0.667) 100%
-  );
+  ); */
   background-attachment: fixed;
 }
 
@@ -345,36 +346,26 @@ nav a {
   margin-left: 5px;
   font-size: 13px;
 }
-/* ///recipe css */
 
-/* popup-Window */
-/* #popup-Content{ */
-/* display: none; */
-/* display: flex;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid black;
-    border-radius: 10px;
-    z-index: 10;
-    background-color: white;
-    width: 500px;
-    max-width: 90%;
-}
-#img-Popup{
-    width: 100%;
-    height: auto;
-    border-right: 1px solid black;
-}
-#text-Content{
-    background: linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%);
-    width: 100%;
-    padding: 10px;
-    text-align: center;
+/* recipe css */
+
+.popUpDiv{
+	position: absolute;
+	top:-10;
+	background: linear-gradient(0deg,rgb(179, 212, 176) 0%,rgba(255, 255, 255, 0.667) 100%);
+	text-align: center;
+	border: 1px solid black;
     border-radius: 0px 10px 10px 0;
-} */
+	width: 320px;
+	height: 710px;
+}
+.recipeCardBtn{
+	margin-top: 10px;
+}
 
+.popUpButton{
+	margin-top: 10px;
+}
 /* contact css */
 #contactForm {
   display: flex;
@@ -392,7 +383,8 @@ nav a {
   height: 25px;
   margin-bottom: 10px;
   padding-left: 10px;
-  background-color: rgba(255, 255, 255, 0.408);
+  background-color: white;
+  border-radius: 5px;
 }
 
 #inputEmail {
@@ -400,7 +392,8 @@ nav a {
   height: 25px;
   margin-bottom: 30px;
   padding-left: 10px;
-  background-color: rgba(255, 255, 255, 0.408);
+  background-color: white;
+  border-radius: 5px;
 }
 
 .textArea {
@@ -411,7 +404,8 @@ nav a {
   width: 100%;
   margin-bottom: 30px;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.408);
+  background-color: white;
+  border-radius: 5px;
 }
 
 #btnContact {
