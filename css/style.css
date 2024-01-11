@@ -8,16 +8,15 @@
   src: url("../fonts/nunito.ttf");
 }
 
-:root{
+:root {
   --textColor: black;
-  --backgroundColor:white;
+  --backgroundColor: white;
 }
 
-
 @media (prefers-color-scheme: dark) {
-  :root{
+  :root {
     --textColor: white;
-    --backgroundColor:black;
+    --backgroundColor: black;
   }
 }
 
@@ -135,7 +134,6 @@ nav a {
 
   .close {
     display: block;
-    /* flex-direction: column; */
   }
 }
 
@@ -529,11 +527,17 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
+  border: 2px solid rgba(119, 129, 119, 0.24);
+  padding: 30px;
+  border-radius: 10px;
 }
 
 .recipe-card {
   display: flex;
   flex-direction: column;
+  border: 2px solid rgba(119, 129, 119, 0.24);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* Heading */
