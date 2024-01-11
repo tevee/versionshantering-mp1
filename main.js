@@ -58,8 +58,8 @@ themeModeEl.addEventListener("change", (event) => {
 	const checkboxEl = document.querySelector("#toggleMode").checked;
 
 	if (checkboxEl) {
-		document.documentElement.style.setProperty("--backgroundColor", "green");
-		document.documentElement.style.setProperty("--textColor", "red");
+		document.documentElement.style.setProperty("--backgroundColor", "black");
+		document.documentElement.style.setProperty("--textColor", "white");
 		console.log("off");
 	} else {
 		document.documentElement.style.setProperty("--backgroundColor", "inherit");
