@@ -45,14 +45,6 @@ export function getInstructionsFromRecipeById(id){
 	return fetchData(URL);
 }
 
-export function getRecipesWithComplexSearch(filters){
-	const END_POINT = 'complexSearch'
-
-	const URL = generateURL(END_POINT, filters)
-
-	return fetchData(URL)
-}
-
 // API COMMUNICATION
 export async function fetchData(url) {
 
