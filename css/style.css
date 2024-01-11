@@ -566,26 +566,24 @@ footer {
 	}
 
 	.nav-link {
-		/* styling for buttons goes here */
 		background: none;
 		border: 0;
 		cursor: pointer;
 	}
 
 	.nav-link.active {
-		/* styling for active link goes here */
 		font-weight: 900;
 	}
 
 	.aboutMainWrapper {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 20px;
+		grid-template-columns: (3, 1fr);
+		gap: 2px;
 	}
 
-	.chefcard {
-		width: calc(33.33% - 20px); /* 3 cards i rad med margin */
-	}
+	/* .chefcard {
+		width: calc(33.33% - 20px); 
+	} */
 
   /* FUNKAR EJ SOM DET SKA */
   /* recipe desktop */
