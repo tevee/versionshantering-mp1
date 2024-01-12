@@ -255,7 +255,7 @@ nav a {
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	gap: 30px;
 	padding: 30px;
-	width: 650px;
+	width: 700px;
 }
 
 .add-border {
@@ -271,7 +271,7 @@ nav a {
 	display: flex;
 	flex-direction: column;
 	border: 2px solid rgba(119, 129, 119, 0.24);
-	background-color: #5c5c5c7a;
+	background-color: #b9b9b97a;
 	padding: 20px;
 	border-radius: 10px;
 	position: relative;
