@@ -325,19 +325,20 @@ nav a {
 #contentContainer {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   border: 2px solid rgba(119, 129, 119, 0.24);
   padding: 30px;
   border-radius: 10px;
-  width: 650px;
+  width: auto;
 }
 
 .recipe-card {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   border: 2px solid rgba(119, 129, 119, 0.24);
-  background-color: #5c5c5c7a;
   padding: 20px;
   border-radius: 10px;
   position: relative;
@@ -354,6 +355,10 @@ nav a {
 .recipe-card > p {
   text-align: start;
 }
+
+.recipe-card > img {
+  width: 70%;
+}
 /* ///recipe css */
 
 .popUpDiv {
@@ -368,6 +373,7 @@ nav a {
   height: 100%;
   overflow: scroll;
 }
+
 .recipeCardBtn {
   padding: 0.4rem;
   border-radius: 10px;
@@ -446,6 +452,8 @@ a {
 .aboutMainWrapper {
   display: flex;
   flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   border-radius: 10px;
   padding: 20px;
@@ -457,12 +465,16 @@ a {
 
 .chefcard {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
 }
 
 .chefcard img {
   max-width: 100px;
+  display: flex;
+  justify-content: center;
+  max-width: 190px;
   margin-left: 10px;
 }
 
@@ -485,6 +497,7 @@ a {
 /* ändrar ordningen för text-container */
 .chefcard:nth-child(even) .text-container {
   order: 0;
+  order: -1;
 }
 /* ///about css */
 
