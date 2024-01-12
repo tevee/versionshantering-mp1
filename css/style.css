@@ -305,6 +305,7 @@ nav a {
   display: flex;
   align-items: center;
   margin-left: 8px;
+  color: var(--textColor);
 }
 
 .storedIngredientsWrapper > p {
@@ -316,6 +317,7 @@ nav a {
 #storedIngredientsContainer {
   display: flex;
   width: 100vw;
+  color: var(--textColor);
 }
 
 /* Recipe by ingredients innehåll */
@@ -340,6 +342,7 @@ nav a {
   position: relative;
   justify-content: flex-start;
   align-items: center;
+  color: var(--textColor);
 }
 
 .recipe-card > img {
@@ -370,6 +373,8 @@ nav a {
   border: 1px solid grey;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-top: 10px;
+  color: black;
+  background-color: white;
 }
 
 .popUpButton {
@@ -378,6 +383,8 @@ nav a {
   border: 1px solid grey;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-top: 10px;
+  color: black;
+  background-color: white;
 }
 
 /* contact css */
@@ -420,8 +427,8 @@ nav a {
   width: 20%;
   align-self: flex-end;
   height: 30px;
-  color: var(--textColor);
-  background-color: var(--backgroundColor);
+  color: black;
+  background-color: white;
   border-radius: 5px;
 }
 /* ///contact css */
@@ -444,6 +451,7 @@ a {
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.209);
   border: 2px solid rgba(119, 129, 119, 0.24);
+  color: var(--textColor);
 }
 
 .chefcard {
@@ -645,6 +653,14 @@ footer {
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.209);
     border: 2px solid rgba(119, 129, 119, 0.24);
+    width: 900px;
+  }
+
+  .aboutWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .chefcard {
@@ -657,7 +673,7 @@ footer {
   .chefcard img {
     display: flex;
     justify-content: center;
-    max-width: 190px;
+    width: 10vw;
     margin-left: 10px;
   }
 
