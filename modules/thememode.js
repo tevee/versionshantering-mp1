@@ -1,8 +1,4 @@
 export function handleDarkMode(event) {
-	const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-	console.log(darkMode);
-
 	event.preventDefault();
 	const checkboxEl = document.querySelector("#toggleMode").checked;
 

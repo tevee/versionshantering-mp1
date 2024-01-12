@@ -25,6 +25,12 @@ const storedIngredientsContainerEl = document.querySelector(
 );
 const themeModeEl = document.querySelector("#themeMode");
 
+const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+if (darkMode) {
+	document.getElementById(toggleMode).setAttribute("checked", true);
+}
+
 // getRandomRecipes({ number: 5 })
 // 	.then((data) => {
 // 		displayRecipe(data, "discoverRandom");
