@@ -1,4 +1,5 @@
 export function createAndAppendElement(type, content, container) {
+	console.log();
 	const element = document.createElement(type);
 	container.append(element);
 
