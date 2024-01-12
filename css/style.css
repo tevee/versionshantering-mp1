@@ -213,9 +213,9 @@ nav a {
 	background-color: rgb(177, 177, 177);
 }
 
-/* #storedIngredientsContainer {
-  width: 100vw;
-} */
+#storedIngredientsContainer {
+	flex-wrap: wrap;
+}
 
 .storedIngredientsWrapper {
 	display: flex;
