@@ -253,10 +253,17 @@ nav a {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	gap: 30px;
-	border: 2px solid rgba(119, 129, 119, 0.24);
 	padding: 30px;
-	border-radius: 10px;
 	width: 650px;
+}
+
+.add-border {
+  border: 2px solid rgba(119, 129, 119, 0.24);
+  border-radius: 10px;
+}
+
+.remove-border {
+  border: none;
 }
 
 .recipe-card {
