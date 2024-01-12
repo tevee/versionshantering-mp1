@@ -344,6 +344,7 @@ nav a {
 
 .recipe-card > img {
   width: 90%;
+  border-radius: 10px;
 }
 
 .recipe-card > p {
@@ -364,10 +365,18 @@ nav a {
   overflow: scroll;
 }
 .recipeCardBtn {
+  padding: 0.4rem;
+  border-radius: 10px;
+  border: 1px solid grey;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-top: 10px;
 }
 
 .popUpButton {
+  padding: 0.4rem;
+  border-radius: 10px;
+  border: 1px solid grey;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-top: 10px;
 }
 
@@ -427,47 +436,47 @@ a {
 }
 
 .aboutMainWrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	border-radius: 10px;
-	padding: 20px;
-	box-sizing: border-box;
-	background-color: rgba(255, 255, 255, 0.209);
-	border: 2px solid rgba(119, 129, 119, 0.24);
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.209);
+  border: 2px solid rgba(119, 129, 119, 0.24);
+}
 
 .chefcard {
-	display: flex;
-	align-items: center;
-	margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
-  
-  .chefcard img {
-	max-width: 100px;
-	margin-left: 10px;
-}
-  
-  .text-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  }
-  
-  .chefcard h3,
-  .chefcard p {
-	margin: 5px;
-	font-size: 15px;
-  }
 
-  .chefcard:nth-child(even) {
-	margin-left: auto;
-  }
-  
-  /* ändrar ordningen för text-container */
-  .chefcard:nth-child(even) .text-container {
-	order: 0;
-  }
+.chefcard img {
+  max-width: 100px;
+  margin-left: 10px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chefcard h3,
+.chefcard p {
+  margin: 5px;
+  font-size: 15px;
+}
+
+.chefcard:nth-child(even) {
+  margin-left: auto;
+}
+
+/* ändrar ordningen för text-container */
+.chefcard:nth-child(even) .text-container {
+  order: 0;
+}
 /* ///about css */
 
 /* footer css */
@@ -481,6 +490,7 @@ footer {
 #socialIcons {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   width: auto;
 }
@@ -628,13 +638,13 @@ footer {
   }
 
   .aboutMainWrapper {
-	display: flex;
-	flex-direction: row;
-	border-radius: 10px;
-	padding: 20px;
-	box-sizing: border-box;
-	background-color: rgba(255, 255, 255, 0.209);
-	border: 2px solid rgba(119, 129, 119, 0.24);
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.209);
+    border: 2px solid rgba(119, 129, 119, 0.24);
   }
 
   .chefcard {
