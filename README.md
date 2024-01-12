@@ -5,9 +5,9 @@ Chef's kiss i a school project developed for mini project 1 in the Version Contr
 ## Features
 
 - Displays 5 random recipes, 5 gluten free recipes and 5 vegan recipes on first page "discover recipes". 
-- Search for recipes by ingredient
-- A Contact form displays under specific tab
-- About us displays under specific tab
+- Search for recipes by ingredient, user can also also view instructions for their preferred recipe.
+- A Contact form that displays under specific tab.
+- About us displays under specific tab.
   
 
 ## Project Documentation
