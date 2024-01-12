@@ -305,6 +305,7 @@ nav a {
   display: flex;
   align-items: center;
   margin-left: 8px;
+  color: var(--textColor);
 }
 
 .storedIngredientsWrapper > p {
@@ -316,6 +317,7 @@ nav a {
 #storedIngredientsContainer {
   display: flex;
   width: 100vw;
+  color: var(--textColor);
 }
 
 /* Recipe by ingredients innehåll */
@@ -340,6 +342,7 @@ nav a {
   position: relative;
   justify-content: flex-start;
   align-items: center;
+  color: var(--textColor);
 }
 
 .recipe-card > img {
@@ -365,10 +368,14 @@ nav a {
 }
 .recipeCardBtn {
   margin-top: 10px;
+  color: black;
+  background-color: white;
 }
 
 .popUpButton {
   margin-top: 10px;
+  color: black;
+  background-color: white;
 }
 
 /* contact css */
@@ -411,8 +418,8 @@ nav a {
   width: 20%;
   align-self: flex-end;
   height: 30px;
-  color: var(--textColor);
-  background-color: var(--backgroundColor);
+  color: black;
+  background-color: white;
   border-radius: 5px;
 }
 /* ///contact css */
@@ -433,6 +440,7 @@ a {
 	border-radius: 10px;
 	padding: 20px;
 	box-sizing: border-box;
+  color: var(--textColor);
 	background-color: rgba(255, 255, 255, 0.209);
 	border: 2px solid rgba(119, 129, 119, 0.24);
   }
