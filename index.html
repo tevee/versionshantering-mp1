@@ -19,40 +19,15 @@
     <!--Header-->
     <header>
       <div id="heading">
-        <a class="toggleFontColor" href="/"
-          ><h1 class="h1FontFamily">Chefs Kiss</h1></a
-        >
-        <div id="themeMode">
-          <input type="checkbox" id="toggleMode" />
-          <label for="toggleMode" class="slidebar"></label>
+        <div class="h1AndThemeMode">
+          <a class="" href="/"><h1 class="h1FontFamily">Chefs Kiss</h1></a>
+          <div id="themeMode">
+            <input type="checkbox" id="toggleMode" />
+            <label for="toggleMode" class="slidebar"></label>
+          </div>
         </div>
-      </div>
-    </header>
-    <!--///Header-->
-
-    <main>
-      <section class="navWrapper">
-        <div class="hamburger">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="26"
-            viewBox="0 -960 960 960"
-            width="26"
-          >
-            <path
-              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-            />
-          </svg>
-        </div>
-        <nav class="sidebar">
-          <button id="home" class="toggleFontColor nav-link active">
-            Discover
-          </button>
-          <button id="recipes" class="toggleFontColor nav-link">Recipes</button>
-          <button id="contact" class="toggleFontColor nav-link">Contact</button>
-          <button id="about" class="toggleFontColor nav-link">About Us</button>
-
-          <div class="close">
+        <section class="navWrapper">
+          <div class="hamburger">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="26"
@@ -60,118 +35,47 @@
               width="26"
             >
               <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
               />
             </svg>
           </div>
-        </nav>
-        <div class="navBorderBottom"></div>
-      </section>
+          <nav class="sidebar">
+            <button id="home" class="nav-link active">Discover</button>
+            <button id="recipes" class="nav-link">Recipes</button>
+            <button id="contact" class="nav-link">Contact</button>
+            <button id="about" class="nav-link">About Us</button>
 
+            <div class="close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="26"
+                viewBox="0 -960 960 960"
+                width="26"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                />
+              </svg>
+            </div>
+          </nav>
+        </section>
+      </div>
+      <div class="navBorderBottom"></div>
+    </header>
+    <!--///Header-->
+
+    <main>
       <section id="mainContainer">
         <div id="home-panel" class="tab-panel active">
           <!-- DISCOVER PAGE HTML GOES HERE -->
-          
-          <div id="discoverContainer">
-            <section>
-              <h2 class="toggleFontColor">Discover Recipes</h2>
-              <div id="discoverRandom" class="discoverRecipes">
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/640803-312x231.jpg" alt="">
-                  <h2>Crispy Buttermilk Fried Chicken</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/665734-312x231.jpg" alt="">
-                  <h2>Zucchini Chicken Omelette</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/649495-312x231.jpg" alt="">
-                  <h2>Lemon and Garlic Slow Roasted Chicken</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/665734-312x231.jpg" alt="">
-                  <h2>Zucchini Chicken Omelette</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/649495-312x231.jpg" alt="">
-                  <h2>Lemon and Garlic Slow Roasted Chicken</h2>
-                </div>
-
-              </div>
-            </section>
-
-            <section>
-              <h2 class="toggleFontColor">Discover Vegan Recipes</h2>
-              <div  id="discoverVegan" class="discoverRecipes">
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/640803-312x231.jpg" alt="">
-                  <h2>Crispy Buttermilk Fried Chicken</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/665734-312x231.jpg" alt="">
-                  <h2>Zucchini Chicken Omelette</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/649495-312x231.jpg" alt="">
-                  <h2>Lemon and Garlic Slow Roasted Chicken</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/665734-312x231.jpg" alt="">
-                  <h2>Zucchini Chicken Omelette</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/649495-312x231.jpg" alt="">
-                  <h2>Lemon and Garlic Slow Roasted Chicken</h2>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 class="toggleFontColor">Discover Gluten-Free Recipes</h2>
-              <div id="discoverGlutenFree" class="discoverRecipes">
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/640803-312x231.jpg" alt="">
-                  <h2>Crispy Buttermilk Fried Chicken</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/665734-312x231.jpg" alt="">
-                  <h2>Zucchini Chicken Omelette</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/649495-312x231.jpg" alt="">
-                  <h2>Lemon and Garlic Slow Roasted Chicken</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/665734-312x231.jpg" alt="">
-                  <h2>Zucchini Chicken Omelette</h2>
-                </div>
-
-                <div class="gridItem image">
-                  <img src="https://spoonacular.com/recipeImages/649495-312x231.jpg" alt="">
-                  <h2>Lemon and Garlic Slow Roasted Chicken</h2>
-                </div>
-              </div>
-            </section>
-          </div>
+          <h2 class="">Discover new recipes</h2>
+          <div id="discoverContainer"></div>
         </div>
-
-        <!-- <div id="recipes-panel" class="tab-panel">
+        <div id="recipes-panel" class="tab-panel">
           <div class="recipesWrapper">
-            <h2 class="toggleFontColor">Search for recipes</h2> -->
-        <!-- RECIPES HTML GOES HERE -->
-        <!-- <form id="getIngredientsForm">
+            <h2>Search for recipes</h2>
+            <!-- RECIPES HTML GOES HERE -->
+            <form id="getIngredientsForm">
               <input
                 type="text"
                 class="search"
@@ -188,32 +92,10 @@
             </form>
             <h2></h2>
             <div id="contentContainer"></div>
+            <!-- här är kod för popup:en -->
+
             <div id="popup-Content"></div>
           </div>
-        </div> -->
-        <div id="recipes-panel" class="tab-panel">
-          <h2 class="toggleFontColor">Search for recipes</h2>
-          <!-- RECIPES HTML GOES HERE -->
-          <form id="getIngredientsForm">
-            <input
-              type="text"
-              class="search"
-              placeholder="Ingredients..."
-              required
-            />
-            <button type="submit">
-              <i class="fa-solid">+</i>
-            </button>
-          </form>
-          <div id="storedIngredientsContainer"></div>
-          <form id="searchRecipe">
-            <button>Search</button>
-          </form>
-          <h2></h2>
-          <div id="contentContainer"></div>
-          <!-- här är kod för popup:en -->
-
-          <div id="popup-Content"></div>
         </div>
 
         <!-- här slutar popup:en -->
@@ -221,7 +103,7 @@
         <div id="contact-panel" class="tab-panel">
           <!-- CONTACT HTML GOES HERE -->
           <div id="contactContainer">
-            <h2 class="toggleFontColor">Ask us anything!</h2>
+            <h2>Ask us anything!</h2>
             <form id="contactForm">
               <input
                 class="inputForm"
@@ -249,55 +131,55 @@
 
         <div id="about-panel" class="tab-panel">
           <!-- ABOUT HTML GOES HERE -->
-          <h2 class="toggleFontColor">Meet the chefs!</h2>
+          <h2>Meet the chefs!</h2>
           <main class="aboutMainWrapper">
             <div class="chefcard">
               <img src="./Img/Chef-img/carbonara.png" alt="profile-img" />
               <div class="text-container">
-                <h3 class="toggleFontColor">Amandas choice</h3>
-                <p class="toggleFontColor">Carbonara</p>
+                <h3>Amandas choice</h3>
+                <p>Carbonara</p>
               </div>
             </div>
             <div class="chefcard">
               <img src="./Img/Chef-img/pizza.png" alt="profile-img" />
               <div class="text-container">
-                <h3 class="toggleFontColor">Andréas choice</h3>
-                <p class="toggleFontColor">Pizza</p>
+                <h3>Andréas choice</h3>
+                <p>Pizza</p>
               </div>
             </div>
             <div class="chefcard">
               <img src="./Img/Chef-img/meatballs.png" alt="profile-img" />
               <div class="text-container">
-                <h3 class="toggleFontColor">Anne-Lies choice</h3>
-                <p class="toggleFontColor">Meatballs</p>
+                <h3>Anne-Lies choice</h3>
+                <p>Meatballs</p>
               </div>
             </div>
             <div class="chefcard">
               <img src="./Img/Chef-img/sandwich.png" alt="profile-img" />
               <div class="text-container">
-                <h3 class="toggleFontColor">Elviras choice</h3>
-                <p class="toggleFontColor">Sandwich</p>
+                <h3>Elviras choice</h3>
+                <p>Sandwich</p>
               </div>
             </div>
             <div class="chefcard">
               <img src="./Img/Chef-img/stirfry.png" alt="profile-img" />
               <div class="text-container">
-                <h3 class="toggleFontColor">Jespers choice</h3>
-                <p class="toggleFontColor">Stir Fry</p>
+                <h3>Jespers choice</h3>
+                <p>Stir Fry</p>
               </div>
             </div>
             <div class="chefcard">
               <img src="./Img/Chef-img/bolognese.png" alt="profile-img" />
               <div class="text-container">
-                <h3 class="toggleFontColor">Thiens choice</h3>
-                <p class="toggleFontColor">Pasta Bolognese</p>
+                <h3>Thiens choice</h3>
+                <p>Pasta Bolognese</p>
               </div>
             </div>
             <div class="chefcard">
               <img src="./Img/Chef-img/tacos.png" alt="profile-img" />
               <div class="text-container">
-                <h3 class="toggleFontColor">Melindas choice</h3>
-                <p class="toggleFontColor">Tacos</p>
+                <h3>Melindas choice</h3>
+                <p>Tacos</p>
               </div>
             </div>
           </main>
@@ -308,13 +190,13 @@
     <div id="displayError"></div>
 
     <!-- Här börjar footern -->
-    <footer id="footerContainer" class="toggleFontColor">
+    <footer id="footerContainer">
       <div id="socialIcons">
-        <a href="#"><i class="fa-brands fa-facebook toggleFontColor"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram toggleFontColor"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter toggleFontColor"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube toggleFontColor"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin toggleFontColor"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
       </div>
       <div class="footer-content">
         <p><b>Contact us</b></p>
