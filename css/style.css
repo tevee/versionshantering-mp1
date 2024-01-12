@@ -532,6 +532,12 @@ footer {
 		background-color: rgba(255, 255, 255, 0.209);
 		border: 2px solid rgba(119, 129, 119, 0.24);
 	}
+  .aboutWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
 	.chefcard {
 		display: flex;
@@ -543,7 +549,7 @@ footer {
 	.chefcard img {
 		display: flex;
 		justify-content: center;
-		max-width: 190px;
+		width: 20vw;
 		margin-left: 10px;
 	}
 
