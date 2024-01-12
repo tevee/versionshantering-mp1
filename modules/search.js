@@ -1,7 +1,7 @@
 import {
 	getRecipesByIngredients,
 	getInstructionsFromRecipeById
-} from "./modules/fetchAPI.js";
+} from "./fetchAPI.js";
 import {
   displaySearchedIngredients,
   removePrevIngredientSearch,
@@ -9,7 +9,7 @@ import {
   removePrevRecipeSearch,
   displayRecipeByIngredients,
   displayInstructionsForRecipe,
-} from "./modules/display.js";
+} from "./display.js";
 
 const ingredientsFormEl = document.querySelector("#getIngredientsForm");
 const searchRecipeFormEl = document.querySelector("#searchRecipe");
