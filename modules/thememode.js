@@ -2,10 +2,7 @@ export const handleDarkMode = {
 	set: () => {
 		const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-		console.log(darkMode);
-
 		if (darkMode) {
-			console.log("I am dark");
 			document.getElementById("toggleMode").checked = true;
 		}
 	},
