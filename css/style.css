@@ -622,12 +622,20 @@ footer {
 
   .aboutMainWrapper {
 	display: flex;
+  width: 900px;
 	flex-direction: row;
 	border-radius: 10px;
 	padding: 20px;
 	box-sizing: border-box;
 	background-color: rgba(255, 255, 255, 0.209);
 	border: 2px solid rgba(119, 129, 119, 0.24);
+  }
+
+  .aboutWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .chefcard {
@@ -640,7 +648,7 @@ footer {
   .chefcard img {
     display: flex;
     justify-content: center;
-    max-width: 190px;
+    width: 10vw;
     margin-left: 10px;
   }
 
