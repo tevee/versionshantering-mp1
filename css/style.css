@@ -497,7 +497,7 @@ footer {
 }
 
 .slidebar:after {
-  content: url(../IMG/sun.svg);
+  content: url(../img/sun.svg);
   width: 30px;
   height: 30px;
   position: absolute;
@@ -516,7 +516,7 @@ footer {
 }
 
 #toggleMode:checked + .slidebar:after {
-  content: url(../IMG/moon.svg);
+  content: url(../img/moon.svg);
   left: calc(100%-60px);
   transform: translateX(100%);
 }
