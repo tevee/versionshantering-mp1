@@ -18,7 +18,6 @@
 }
 
 .gridItem {
-	background-color: rgba(187, 187, 187, 0.184);
 	overflow: hidden;
 	display: grid;
 }
