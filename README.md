@@ -5,7 +5,7 @@ Chef's kiss is a school project developed for mini project 1 in the Version Cont
 ## Features
 
 - Displays 5 random recipes, 5 gluten free recipes and 5 vegan recipes on first page "discover recipes". 
-- Search for recipes by ingredient, user can remove searched ingredients. User can also also view instructions for their preferred recipe.
+- User can search for ingredients and remove searched ingredients. User can also search for recipes by ingredient and view instructions for their preferred recipe.
 - A Contact form that displays under contact tab.
 - About us displays under about us tab.
 - Displays error if: user enters an ingredient that doesn't match any results in the API response, similarly if no random recipes are found on the "discover" page. For any other errors, a corresponding message will be displayed to inform the user.
