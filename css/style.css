@@ -277,6 +277,7 @@ nav a {
 	position: relative;
 	justify-content: flex-start;
 	align-items: center;
+	color: var(--textColor);
 }
 
 .recipe-card > img {
@@ -285,6 +286,7 @@ nav a {
 
 .recipe-card > p {
 	text-align: start;
+	/* color: var(--textColor); */
 }
 /* ///recipe css */
 
@@ -302,6 +304,8 @@ nav a {
 }
 .recipeCardBtn {
 	margin-top: 10px;
+	color: var(--textColor);
+	background-color: var(--backgroundColor);
 }
 
 .popUpButton {
