@@ -143,79 +143,6 @@ nav a {
 }
 /* ///Tab styling */
 
-/* discover css*/
-.discoverRecipes {
-	display: grid;
-	grid-template-columns: repeat(7, 1fr);
-	grid-auto-rows: 250px;
-	gap: 0.5rem;
-	border-radius: 10px;
-	padding: 20px;
-	box-sizing: border-box;
-	background-color: rgba(147, 147, 147, 0.229);
-	border: 2px solid rgba(137, 137, 137, 0.24);
-}
-
-.discoverRecipes h2 {
-	font-family: "nunito", sans-serif;
-	background-color: var(--backgroundColor);
-	margin: 0;
-}
-
-.gridItem {
-	background-color: rgba(187, 187, 187, 0.184);
-	overflow: hidden;
-	display: grid;
-}
-
-.gridItem img {
-	object-fit: cover;
-	justify-self: center;
-	height: 100%;
-	width: 110%;
-}
-
-.gridItem:nth-child(1) {
-	grid-column: span 7;
-}
-
-.gridItem:nth-child(2),
-.gridItem:nth-child(5) {
-	grid-column: span 4;
-}
-
-.gridItem:nth-child(3),
-.gridItem:nth-child(4) {
-	grid-column: span 3;
-}
-
-@media (min-width: 1000px) {
-	.discoverRecipes {
-		width: 800px;
-		margin: auto;
-	}
-
-	.gridItem:nth-child(5) {
-		grid-column: span 3;
-	}
-	.gridItem:nth-child(2),
-	.gridItem:nth-child(7) {
-		grid-column: span 3;
-	}
-
-	.gridItem:nth-child(1) {
-		grid-column: span 5;
-	}
-
-	.gridItem:nth-child(2),
-	.gridItem:nth-child(3),
-	.gridItem:nth-child(4) {
-		grid-column: span 2;
-	}
-}
-
-/* ///discover css*/
-
 /* recipe css */
 #getIngredientsForm {
 	background-color: var(--backgroundColor);
@@ -370,52 +297,6 @@ nav a {
 .popUpButton {
 	margin-top: 10px;
 }
-
-/* contact css */
-#contactForm {
-	display: flex;
-	flex-direction: column;
-	border-radius: 10px;
-	padding: 20px;
-	box-sizing: border-box;
-	background-color: rgba(147, 147, 147, 0.229);
-	border: 2px solid rgba(119, 129, 119, 0.24);
-	height: 400px;
-}
-
-#inputName {
-	width: 40%;
-	height: 25px;
-	margin-bottom: 10px;
-	padding-left: 10px;
-	background-color: rgba(255, 255, 255, 0.812);
-}
-
-#inputEmail {
-	width: 40%;
-	height: 25px;
-	margin-bottom: 30px;
-	padding-left: 10px;
-	background-color: rgba(255, 255, 255, 0.812);
-}
-
-.textArea {
-	height: 100px;
-	width: 100%;
-	margin-bottom: 10px;
-	padding: 10px;
-	background-color: rgba(255, 255, 255, 0.812);
-}
-
-#btnContact {
-	width: 20%;
-	align-self: flex-end;
-	height: 30px;
-	color: var(--textColor);
-	background-color: var(--backgroundColor);
-	border-radius: 5px;
-}
-/* ///contact css */
 
 /* about css */
 nav {
@@ -688,18 +569,6 @@ footer {
 }
 /* /// recipe desktop
 
-	/* contact desktop */
-#contactContainer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-
-#contactForm {
-	width: 570px;
-}
-/* ///contact desktop */
 
 /* footer desktop */
 #socialIcons {
