@@ -8,6 +8,7 @@ Chef's kiss i a school project developed for mini project 1 in the Version Contr
 - Search for recipes by ingredient, user can also also view instructions for their preferred recipe.
 - A Contact form that displays under contact tab.
 - About us displays under about us tab.
+- Displays error if: user enters an ingredient that doesn't match any results in the API response, similarly if no random recipes are found on the "discover" page. For any other errors, a corresponding message will be displayed to inform the user.
   
 
 ## Project Documentation
