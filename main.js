@@ -20,9 +20,7 @@ document.querySelector(".close").addEventListener("click", hideSidebar);
 const contentContainerEl = document.querySelector("#contentContainer");
 const ingredientsFormEl = document.querySelector("#getIngredientsForm");
 const searchRecipeFormEl = document.querySelector("#searchRecipe");
-const storedIngredientsContainerEl = document.querySelector(
-	"#storedIngredientsContainer"
-);
+const storedIngredientsContainerEl = document.querySelector("#storedIngredientsContainer");
 const themeModeEl = document.querySelector("#themeMode");
 
 handleDarkMode.set();
@@ -46,10 +44,7 @@ getRandomRecipes({ excludeTags: "gluten", number: 5 })
 	.catch((error) => displayError(error));
 
 ingredientsFormEl.addEventListener("submit", handleGetAndDisplayIngredients);
-storedIngredientsContainerEl.addEventListener(
-	"click",
-	handleRemoveDisplayedIngredients
-);
+storedIngredientsContainerEl.addEventListener("click", handleRemoveDisplayedIngredients);
 searchRecipeFormEl.addEventListener("submit", handleGetRecipesByIngredients);
 contentContainerEl.addEventListener("click", handlePopUpInstructions);
 themeModeEl.addEventListener("change", handleDarkMode.change);

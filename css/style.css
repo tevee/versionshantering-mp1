@@ -220,6 +220,7 @@ nav a {
 
 .storedIngredientsWrapper {
   display: flex;
+  border: 1px solid var(--textColor);
   background-color: var(--backgroundColor);
   border-radius: 15px;
   padding: 3px 10px;
