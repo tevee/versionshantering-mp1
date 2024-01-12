@@ -285,9 +285,15 @@ nav a {
 }
 
 .recipe-card > p {
-  text-align: start;
-  /* color: var(--textColor); */
+	text-align: center;
+	/* color: var(--textColor); */
 }
+
+.recipe-card > h2 {
+  font-size: 18px;
+}
+
+.rec
 /* ///recipe css */
 
 .popUpDiv {

@@ -12,13 +12,12 @@
 }
 
 .discoverRecipes h2 {
-	font-family: "nunito", sans-serif;
 	background-color: var(--backgroundColor);
-	margin: 0;
+	margin-top: 0;
+	font-size: 15px;
 }
 
 .gridItem {
-	background-color: rgba(187, 187, 187, 0.184);
 	overflow: hidden;
 	display: grid;
 }
