@@ -9,6 +9,8 @@ export function displaySearchedIngredients(savedResultObj) {
 
 export function removePrevRecipeSearch() {
     const contentContainerEl = document.querySelector('#contentContainer');
+    contentContainerEl.classList.remove('add-border')
+    contentContainerEl.classList.add('remove-border')
     contentContainerEl.innerHTML = '';
 }
 
@@ -68,6 +70,8 @@ export function displayRandomRecipe(data) {
 
 export function displayRecipeByIngredients(data){
     const contentContainer = document.querySelector('#contentContainer');
+    contentContainer.classList.add('add-border')
+    contentContainer.classList.remove('remove-border')
     
     for (const recipe of data) {
         const recipeCard = createAndAppendElement('div', '', contentContainer)
