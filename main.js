@@ -1,8 +1,13 @@
-import { displayRecipe, displayError} from "./modules/display.js"
+import { displayRecipe, displayError } from "./modules/display.js";
 import { getRandomRecipes } from "./modules/fetchAPI.js";
 import { handleTabClick } from "./modules/tabs.js";
 import { showSidebar, hideSidebar } from "./modules/hamburger.js";
-import { handleGetAndDisplayIngredients, handleRemoveDisplayedIngredients, handleGetRecipesByIngredients, handlePopUpInstructions } from "./modules/search.js";
+import {
+	handleGetAndDisplayIngredients,
+	handleRemoveDisplayedIngredients,
+	handleGetRecipesByIngredients,
+	handlePopUpInstructions,
+} from "./modules/search.js";
 import { handleDarkMode } from "./modules/thememode.js";
 
 // eventlistener for tabs
@@ -15,9 +20,10 @@ document.querySelector(".close").addEventListener("click", hideSidebar);
 const contentContainerEl = document.querySelector("#contentContainer");
 const ingredientsFormEl = document.querySelector("#getIngredientsForm");
 const searchRecipeFormEl = document.querySelector("#searchRecipe");
-const storedIngredientsContainerEl = document.querySelector("#storedIngredientsContainer");
+const storedIngredientsContainerEl = document.querySelector(
+	"#storedIngredientsContainer"
+);
 const themeModeEl = document.querySelector("#themeMode");
-
 
 // getRandomRecipes({ number: 5 })
 // 	.then((data) => {
@@ -32,7 +38,10 @@ const themeModeEl = document.querySelector("#themeMode");
 // 	.catch((error) => displayError(error));
 
 ingredientsFormEl.addEventListener("submit", handleGetAndDisplayIngredients);
-storedIngredientsContainerEl.addEventListener("click", handleRemoveDisplayedIngredients);
+storedIngredientsContainerEl.addEventListener(
+	"click",
+	handleRemoveDisplayedIngredients
+);
 searchRecipeFormEl.addEventListener("submit", handleGetRecipesByIngredients);
 contentContainerEl.addEventListener("click", handlePopUpInstructions);
-themeModeEl.addEventListener('change', handleDarkMode)
+themeModeEl.addEventListener("change", handleDarkMode);
