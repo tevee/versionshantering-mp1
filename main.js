@@ -25,14 +25,7 @@ const storedIngredientsContainerEl = document.querySelector(
 );
 const themeModeEl = document.querySelector("#themeMode");
 
-const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-console.log(darkMode);
-
-if (darkMode) {
-	console.log("I am dark");
-	document.getElementById("toggleMode").checked = true;
-}
+handleDarkMode.set();
 
 // getRandomRecipes({ number: 5 })
 // 	.then((data) => {
@@ -53,4 +46,4 @@ storedIngredientsContainerEl.addEventListener(
 );
 searchRecipeFormEl.addEventListener("submit", handleGetRecipesByIngredients);
 contentContainerEl.addEventListener("click", handlePopUpInstructions);
-themeModeEl.addEventListener("change", handleDarkMode);
+themeModeEl.addEventListener("change", handleDarkMode.change);
