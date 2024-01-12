@@ -40,11 +40,11 @@ export function displayError(error) {
 	errorContainer.append(h2El);
 }
 
-export function displayRecipe(data) {
-	const discoverContainer = document.querySelector("#discoverContainer");
+export function displayRecipe(data, id) {
+	const section = document.getElementById(id);
 
 	for (const recipe of data.recipes) {
-		const gridItemEl = createAndAppendElement("div", "", discoverContainer);
+		const gridItemEl = createAndAppendElement("div", "", section);
 		gridItemEl.classList.add("gridItem");
 		gridItemEl.classList.add("image");
 		createAndAppendElement("img", recipe.image, gridItemEl);

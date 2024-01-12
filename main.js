@@ -27,17 +27,23 @@ const themeModeEl = document.querySelector("#themeMode");
 
 handleDarkMode.set();
 
-// getRandomRecipes({ number: 5 })
-// 	.then((data) => {
-// 		displayRecipe(data, "discoverRandom");
-// 	})
-// 	.catch((error) => displayError(error));
+getRandomRecipes({ number: 5 })
+	.then((data) => {
+		displayRecipe(data, "discoverRandom");
+	})
+	.catch((error) => displayError(error));
 
-// getRandomRecipes({ excludeTags: "gluten", number: 5 })
-// 	.then((data) => {
-// 		displayRecipe(data, "discoverVegan");
-// 	})
-// 	.catch((error) => displayError(error));
+getRandomRecipes({ excludeTags: "vegan", number: 5 })
+	.then((data) => {
+		displayRecipe(data, "discoverVegan");
+	})
+	.catch((error) => displayError(error));
+
+getRandomRecipes({ excludeTags: "gluten", number: 5 })
+	.then((data) => {
+		displayRecipe(data, "discoverGlutenFree");
+	})
+	.catch((error) => displayError(error));
 
 ingredientsFormEl.addEventListener("submit", handleGetAndDisplayIngredients);
 storedIngredientsContainerEl.addEventListener(
