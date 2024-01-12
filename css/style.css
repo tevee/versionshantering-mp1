@@ -285,8 +285,8 @@ nav a {
 }
 
 .recipe-card > p {
-	text-align: center;
-	/* color: var(--textColor); */
+  text-align: center;
+  /* color: var(--textColor); */
 }
 
 .recipe-card > h2 {
@@ -405,7 +405,7 @@ footer {
 #socialIcons a:hover {
   margin: 10px;
   padding: 5px;
-  font-size: 40px;
+  /* font-size: 40px; */
   color: rgb(40, 40, 40);
   margin: 10px;
 }
