@@ -131,7 +131,7 @@ nav a {
 }
 
 .nav-link.active {
-  /* styling for active link goes here */
+  font-weight: 900;
 }
 
 .tab-panel {
@@ -501,9 +501,9 @@ footer {
 }
 
 #socialIcons a:hover {
-  margin: 10px;
-  padding: 5px;
-  font-size: 40px;
+  /* margin: 10px; */
+  /* padding: 5px; */
+  /* font-size: 40px; */
   color: rgb(40, 40, 40);
   margin: 10px;
 }
