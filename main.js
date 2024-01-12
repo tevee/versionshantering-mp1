@@ -28,7 +28,7 @@ const themeModeEl = document.querySelector("#themeMode");
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 if (darkMode) {
-	document.getElementById(toggleMode).checked = true;
+	document.getElementById("toggleMode").checked = true;
 }
 
 // getRandomRecipes({ number: 5 })
