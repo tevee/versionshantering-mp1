@@ -286,11 +286,12 @@ nav a {
   background-color: rgb(177, 177, 177);
 }
 
-#storedIngredientsContainer {
+/* #storedIngredientsContainer {
   width: 100vw;
-}
+} */
 
 .storedIngredientsWrapper {
+  display: flex;
   background-color: var(--backgroundColor);
   border-radius: 15px;
   padding: 3px 10px;
@@ -303,11 +304,50 @@ nav a {
   border-radius: 10px;
   display: flex;
   align-items: center;
+  margin-left: 8px;
 }
 
 .storedIngredientsWrapper > p {
   margin-left: 5px;
   font-size: 13px;
+}
+
+/* Sökta ingredients element */
+#storedIngredientsContainer {
+  display: flex;
+  width: 100vw;
+}
+
+/* Recipe by ingredients innehåll */
+#contentContainer {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  border: 2px solid rgba(119, 129, 119, 0.24);
+  padding: 30px;
+  border-radius: 10px;
+  width: 650px;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(119, 129, 119, 0.24);
+  background-color: #5c5c5c7a;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.recipe-card > img {
+  width: 90%;
+}
+
+.recipe-card > p {
+  text-align: start;
 }
 /* ///recipe css */
 
@@ -469,39 +509,6 @@ footer {
   flex-wrap: wrap;
 }
 /* ///footer css */
-
-/* Sökta ingredients element */
-#storedIngredientsContainer {
-  display: flex;
-}
-
-.storedIngredientsWrapper {
-  display: flex;
-}
-
-.storedIngredientsWrapper > button {
-  margin-left: 8px;
-}
-
-/* Recipe by ingredients innehåll */
-#contentContainer {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  border: 2px solid rgba(119, 129, 119, 0.24);
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.recipe-card {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid rgba(119, 129, 119, 0.24);
-  padding: 20px;
-  border-radius: 10px;
-  position: relative;
-}
 
 /* Heading */
 #heading {
