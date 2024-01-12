@@ -13,7 +13,7 @@ Chef's kiss i a school project developed for mini project 1 in the Version Contr
 
 ## Project Documentation
 
-For detailed information about how the contributors worked in the project, refer to [Kanban](https://github.com/users/tevee/projects/2/views/1)
+For detailed information about how the contributors worked in the project, refer to [Kanban](https://github.com/users/tevee/projects/2/views/1).
 
 For detailed information about the project, refer to the [GitHub Wiki](https://github.com/tevee/versionshantering-mp1/wiki).
 
