@@ -6,7 +6,7 @@ Chef's kiss i a school project developed for mini project 1 in the Version Contr
 
 - Display random recipes
 - Search for recipes by ingredient
-- Contact form displays under specific tab
+- A Contact form displays under specific tab
 - About us displays under specific tab
   
 
