@@ -1,6 +1,6 @@
 # Chef's Kiss
 
-Chef's kiss i a school project developed for mini project 1 in the Version Control course at Grit Academy.
+Chef's kiss is a school project developed for mini project 1 in the Version Control course at Grit Academy.
 
 ## Features
 
